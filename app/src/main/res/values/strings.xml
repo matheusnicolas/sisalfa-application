@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SisalfaProject</string>
+    <string name="facebook_app_id">505584699826565</string>
+    <string name="cancel_login">Logout</string>
+    <string name="error_login">Ocorreu um erro</string>
+    <string name="not_log_in">Não foi possível iniciar a sessão</string>
+    <string name="log_out">Log Out</string>
+    <string name="revoke">Revoke</string>
+    <string name="not_close_session">Sessão não Finalizada</string>
+    <string name="not_revoke">Não pode revogar o acesso</string>
+
+</resources>

@@ -1,0 +1,4 @@
+#Tue Nov 28 03:45:15 BRST 2017
+base.0=C\:\\Users\\Proext\\Desktop\\AppSisalfa\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=C\:\\Users\\Proext\\Desktop\\AppSisalfa\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

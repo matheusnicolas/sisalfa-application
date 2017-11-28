@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "995909783459",
+    "firebase_url": "https://app-sisalfa.firebaseio.com",
+    "project_id": "app-sisalfa",
+    "storage_bucket": "app-sisalfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995909783459:android:10d388f87b70de53",
+        "android_client_info": {
+          "package_name": "sisalfa.android.com.appsisalfa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995909783459-gu14ee41uu2chiu7skbd31h49ppi062q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sisalfa.android.com.appsisalfa",
+            "certificate_hash": "63c6e0156766855bd9464b89da2da13691cbb41f"
+          }
+        },
+        {
+          "client_id": "995909783459-ggvtt6pv07f98ufehlpf7b1p3kqpn9fv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx8gzYXKRpeHT2W8AT5PsehiRpS3ZM7Es"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995909783459-ggvtt6pv07f98ufehlpf7b1p3kqpn9fv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
