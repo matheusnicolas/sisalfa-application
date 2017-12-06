@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">995909783459-ggvtt6pv07f98ufehlpf7b1p3kqpn9fv.apps.googleusercontent.com</string>
-    <string name="firebase_database_url" translatable="false">https://app-sisalfa.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">995909783459</string>
-    <string name="google_api_key" translatable="false">AIzaSyBx8gzYXKRpeHT2W8AT5PsehiRpS3ZM7Es</string>
-    <string name="google_app_id" translatable="false">1:995909783459:android:10d388f87b70de53</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBx8gzYXKRpeHT2W8AT5PsehiRpS3ZM7Es</string>
-    <string name="google_storage_bucket" translatable="false">app-sisalfa.appspot.com</string>
-    <string name="project_id" translatable="false">app-sisalfa</string>
+    <string name="default_web_client_id" translatable="false">873653003880-g3gdj6nd94kq06hfuhnv91joari9ni0p.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://sisalfa-7f6c2.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">873653003880</string>
+    <string name="google_api_key" translatable="false">AIzaSyB1oG69kGLG42qs5s_-l8uLcCtWMtOre8Y</string>
+    <string name="google_app_id" translatable="false">1:873653003880:android:10d388f87b70de53</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB1oG69kGLG42qs5s_-l8uLcCtWMtOre8Y</string>
+    <string name="google_storage_bucket" translatable="false">sisalfa-7f6c2.appspot.com</string>
+    <string name="project_id" translatable="false">sisalfa-7f6c2</string>
 </resources>

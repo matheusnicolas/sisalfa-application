@@ -57,7 +57,7 @@
     <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"‏האפליקציה <ns1:g id="APP_NAME">%1$s</ns1:g> לא תפעל ללא שירותי Google Play, שמתעדכנים כרגע."</string>
     <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"‏דרושה גרסה חדשה של שירותי Google Play. הגרסה תתעדכן בעצמה תוך זמן קצר."</string>
     <string msgid="5201977337835724196" name="common_open_on_phone">"פתח בטלפון"</string>
-    <string msgid="3441753203274453993" name="common_signin_button_text">"כניסה"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"היכנס"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"‏היכנס באמצעות Google"</string>
     <string msgid="146198913615257606" name="search_menu_title">"חפש"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"‎999+‎"</string>

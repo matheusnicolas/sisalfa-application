@@ -1,32 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
     tools:context="sisalfa.android.com.appsisalfa.LoginActivity">
+
 
     <ImageView
         android:layout_width="210dp"
         android:layout_height="240dp"
         android:background="@drawable/lamp_sisalfa"
-        android:layout_gravity="center"
-        android:layout_marginTop="60dp"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bem vindo ao Sisalfa!"
         android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="360dp"
         android:textSize="25dp"/>
 
     <com.facebook.login.widget.LoginButton
-        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/login_button"
-        android:layout_marginTop="20dp"
-    ></com.facebook.login.widget.LoginButton>
+        android:layout_marginTop="410dp"
+        ></com.facebook.login.widget.LoginButton>
 
-</LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:indeterminate="true"/>
+
+</RelativeLayout>

@@ -9,13 +9,32 @@
     android:id="@+id/layout_info">
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email de fulano"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:id="@+id/user_email"
+        />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem Vindo, fulano de tal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bem Vindo, fulando de tal"
+        android:text="ID"
         android:layout_gravity="center"
-        android:layout_marginTop="200dp"/>
+        android:layout_marginTop="10dp"
+        android:id="@+id/user_id"/>
+
+
 
 
     <ImageButton
