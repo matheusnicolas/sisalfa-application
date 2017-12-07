@@ -2,9 +2,12 @@ package sisalfa.android.com.appsisalfa;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -34,17 +37,22 @@ import java.util.Arrays;
 //Activity o qual o usuário é redirecionado a partir da tela de login
 public class MainActivity extends AppCompatActivity {
 
-    private TextView tEmail;
+
+    //private TextView tEmail;
     private TextView tUserName;
-    private TextView tID;
+    //private TextView tID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tEmail = (TextView)findViewById(R.id.user_email);
+
+
+
+
+        //tEmail = (TextView)findViewById(R.id.user_email);
         tUserName = (TextView)findViewById(R.id.user_name);
-        tID = (TextView)findViewById(R.id.user_id);
+        //tID = (TextView)findViewById(R.id.user_id);
 
         //Retorna o usuário atualmente logado
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -52,13 +60,13 @@ public class MainActivity extends AppCompatActivity {
         //Se o usuário não for nulo, existe algum usuário assim, as informações do usuário são recuperadas a seguir, senão se assume que o usuário deslogou, voltando para a tela de login
         if(user != null){
             String name = user.getDisplayName();
-            String email = user.getEmail();
-            String id = user.getUid();
-            Uri photoUrl = user.getPhotoUrl();
+            // String email = user.getEmail();
+            //String id = user.getUid();
+            //Uri photoUrl = user.getPhotoUrl();
 
-            tEmail.setText("Este é o seu Email: " + email);
-            tUserName.setText("Seja bem vindo, " + name + "!");
-            tID.setText(id);
+            //tEmail.setText("Este é o seu Email: " + email);
+            tUserName.setText("Agora você está logado, " + name + "!");
+            //tID.setText(id);
         }else{
             goLoginScreen();
         }

@@ -58,16 +58,15 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:exported="true"
             android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
 
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:theme="@style/com_facebook_activity_theme" />
         <activity android:name="com.facebook.CustomTabMainActivity" />
-
-        <meta-data
-            android:name="android.support.VERSION"
-            android:value="26.1.0" />
-
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

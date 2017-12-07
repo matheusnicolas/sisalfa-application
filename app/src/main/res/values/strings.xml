@@ -9,5 +9,9 @@
     <string name="not_close_session">Sessão não Finalizada</string>
     <string name="not_revoke">Não pode revogar o acesso</string>
     <string name="firebase_error_login">Ocorreu um Erro</string>
+    <string name="home">Inicio</string>
+    <string name="add">Adicionar</string>
+    <string name="logout">Logout</string>
+    <string name="list">Listar</string>
 
 </resources>

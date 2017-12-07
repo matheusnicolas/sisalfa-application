@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inicio_item"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"/>
+
+    <item
+        android:id="@+id/add_item"
+        android:icon="@drawable/ic_add"
+        android:title="@string/add"/>
+
+    <item
+        android:id="@+id/list_item"
+        android:icon="@drawable/ic_view_list"
+        android:title="@string/list"/>
+
+    <item
+        android:id="@+id/logout_item"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/logout"/>
+</menu>

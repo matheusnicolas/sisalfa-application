@@ -8,44 +8,83 @@
     android:orientation="vertical"
     android:id="@+id/layout_info">
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email de fulano"
+        android:text="Bem vindo, fulano de tal!"
+        android:textSize="15dp"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
-        android:id="@+id/user_email"
-        />
-
-    <TextView
         android:id="@+id/user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bem Vindo, fulano de tal"
+    />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_contexto"
+        android:layout_marginRight="80dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="50dp"
+        android:id="@+id/button_contexto"
+    />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ID"
+        android:text="Contexto"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:id="@+id/user_id"/>
-
-
+        android:layout_marginRight="80dp"/>
 
 
     <ImageButton
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/logout_button"
+        android:id="@+id/button_desafio"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="-69dp"
+        android:background="@drawable/ic_desafio" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="80dp"
+        android:text="Desafio"/>
+
+    <ImageButton
+        android:id="@+id/button_user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/ic_user" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="80dp"
+        android:text="Usuário"/>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_logout"
+        android:layout_gravity="center"
+        android:layout_marginTop="-69dp"
+        android:layout_marginLeft="80dp"
         android:onClick="logout"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        />
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_gravity="center"
+        android:layout_marginLeft="80dp"
+    />
 
 </LinearLayout>
 

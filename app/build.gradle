@@ -30,5 +30,6 @@ dependencies {
     compile 'com.facebook.android:facebook-android-sdk:4.28.0'
     compile 'com.google.firebase:firebase-core:11.0.4'
     compile 'com.google.firebase:firebase-auth:11.0.4'
+    compile 'com.android.support:design:26.1.0'
 }
 apply plugin: 'com.google.gms.google-services'

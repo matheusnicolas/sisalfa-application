@@ -5,32 +5,57 @@
     build-mode="COLD"
     density="xxhdpi"
     format="10"
+    ir-eligibility="R_CLASS_CHANGE"
     plugin-version="3.0.1"
-    timestamp="1512536524317"
+    timestamp="1512608639408"
     token="-4042217537048900902"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="2336" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="62" />
     <task
         name="verifier"
-        duration="0" />
+        duration="167" />
 
+    <artifact
+        location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        type="SPLIT" />
     <artifact
         location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\outputs\apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1512533940326"
+        timestamp="1512601802209"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
         <artifact
             location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
@@ -38,7 +63,13 @@
             location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
+            location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
             location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
@@ -49,15 +80,6 @@
         <artifact
             location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\outputs\apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
-        <artifact
-            location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
         <artifact
             location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
@@ -71,7 +93,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1512535483409"
+        timestamp="1512608639408"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
@@ -91,20 +113,9 @@
         <artifact
             location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1512535834366"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1512536524317"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Pichau\Desktop\sisalfa-application\app\build\outputs\apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
