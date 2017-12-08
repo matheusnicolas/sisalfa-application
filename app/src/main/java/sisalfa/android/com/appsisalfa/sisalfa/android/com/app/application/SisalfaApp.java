@@ -1,4 +1,4 @@
-package sisalfa.android.com.appsisalfa;
+package sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application;
 
 import android.app.Application;
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="sisalfa.android.com.appsisalfa.MainActivity"
+    tools:context=".sisalfa.android.com.app.application.MainActivity"
     android:orientation="vertical"
     android:id="@+id/layout_info">
 
@@ -19,13 +19,13 @@
     />
 
     <ImageButton
+        android:id="@+id/button_contexto"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/ic_contexto"
         android:layout_marginRight="80dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:id="@+id/button_contexto"
     />
 
     <TextView
@@ -34,7 +34,6 @@
         android:text="Contexto"
         android:layout_gravity="center"
         android:layout_marginRight="80dp"/>
-
 
     <ImageButton
         android:id="@+id/button_desafio"

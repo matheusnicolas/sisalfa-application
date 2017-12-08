@@ -36,14 +36,14 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name="sisalfa.android.com.appsisalfa.MainActivity" >
+        <activity android:name="sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="sisalfa.android.com.appsisalfa.LoginActivity" />
+        <activity android:name="sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.LoginActivity" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"
