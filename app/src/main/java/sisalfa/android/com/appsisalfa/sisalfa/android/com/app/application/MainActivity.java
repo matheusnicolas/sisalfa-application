@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import sisalfa.android.com.appsisalfa.R;
 import sisalfa.android.com.appsisalfa.sisalfa.android.com.app.connection.UrlRequest;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private RequestQueue queueVolley;
     private boolean successRequest;
     private TextView tUserName;
+    private TextView tUserEmail;
     private UrlRequest urlRequest;
     User usuario = new User();
 
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         queueVolley = Volley.newRequestQueue(this);
         successRequest = true;
         tUserName = (TextView)findViewById(R.id.user_name);
+        tUserEmail = (TextView)findViewById(R.id.user_email);
 
         //Retorna o usuário atualmente logado
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -48,8 +51,11 @@ public class MainActivity extends AppCompatActivity {
         //Se o usuário não for nulo, existe algum usuário assim, as informações do usuário são recuperadas a seguir, senão se assume que o usuário deslogou, voltando para a tela de login
         if(user != null){
             String name = user.getDisplayName();
+            String email = user.getEmail();
             tUserName.setText("Agora você está logado, " + name + "!");
+            tUserEmail.setText("Email: " + email);
             usuario.setEmail(user.getEmail());
+
             JsonObjectRequest request = enviarUsuario();
         }else{
             goLoginScreen();
@@ -113,9 +119,10 @@ public class MainActivity extends AppCompatActivity {
 
     private JSONObject montagemUsuario(){
         JSONObject json = new JSONObject();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String email = user.getEmail();
         try {
-            json.put("nome", usuario.getEmail());
-
+            json.put("nome", email);
         } catch (JSONException e) {
             e.printStackTrace();
         }

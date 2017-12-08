@@ -18,6 +18,16 @@
         android:id="@+id/user_name"
     />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="email"
+        android:textSize="15dp"
+        android:layout_gravity="center"
+        android:id="@+id/user_email"
+        />
+
+
     <ImageButton
         android:id="@+id/button_contexto"
         android:layout_width="50dp"

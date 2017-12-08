@@ -183,5 +183,6 @@
     <orderEntry type="library" name="com.facebook.android:facebook-login-4.28.0" level="project" />
     <orderEntry type="library" name="com.squareup.okio:okio:1.9.0@jar" level="project" />
     <orderEntry type="library" name="com.facebook.android:facebook-applinks-4.28.0" level="project" />
+    <orderEntry type="module" module-name="volley" />
   </component>
 </module>
