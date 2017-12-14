@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-30:12
+ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-31:12
 MERGED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\57e465d4d8decad9bc5b04b0e4a9cc2e\AndroidManifest.xml:16:1-26:12
 MERGED from [com.facebook.android:facebook-android-sdk:4.28.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.28.0.aar\fe9092ff87cc1e4fd5b77dcfa1107292\AndroidManifest.xml:21:1-31:12
 MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\3c0a16a66b1ec755dff6d17e2eb2461c\AndroidManifest.xml:2:1-6:12
@@ -40,20 +40,20 @@ MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Pichau
 MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\96d1757ab7292016df22188f89c09319\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\9dacdf394a2d893b776668d65bfd11b7\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\c126e9b3403c3253ade1b7b4c4d4252f\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:3:5-45
 		INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-30:12
+		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-30:12
+		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:2:11-69
@@ -78,7 +78,7 @@ MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\Pichau\.gradle\ca
 	android:name
 		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:6:22-76
 application
-ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:8:5-28:19
+ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:8:5-29:19
 MERGED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\57e465d4d8decad9bc5b04b0e4a9cc2e\AndroidManifest.xml:19:5-25:19
 MERGED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\57e465d4d8decad9bc5b04b0e4a9cc2e\AndroidManifest.xml:19:5-25:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.28.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.28.0.aar\fe9092ff87cc1e4fd5b77dcfa1107292\AndroidManifest.xml:28:5-29:19
@@ -168,7 +168,7 @@ ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManif
 	android:name
 		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:16:13-58
 activity#sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.MainActivity
-ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:19:9-95
+ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:19:9-86
 	android:name
 		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:19:19-83
 activity#sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.LoginActivity
@@ -186,9 +186,13 @@ ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManif
 	android:name
 		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:24:27-74
 activity#sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.ContextoActivity
-ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:27:9-99
+ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:27:9-90
 	android:name
 		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:27:19-87
+activity#sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.UserActivity
+ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:28:9-95
+	android:name
+		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:28:19-83
 uses-sdk
 INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml

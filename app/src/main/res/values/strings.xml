@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SisalfaProject</string>
     <string name="facebook_app_id">505584699826565</string>
+    <string name="fb_login_protocol_scheme">fb505584699826565</string>
     <string name="cancel_login">Login cancelado</string>
     <string name="error_login">Ocorreu um erro</string>
     <string name="not_log_in">Não foi possível iniciar a sessão</string>

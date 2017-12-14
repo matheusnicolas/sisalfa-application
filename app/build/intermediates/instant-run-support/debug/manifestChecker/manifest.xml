@@ -45,6 +45,7 @@
             </intent-filter>
         </activity>
         <activity android:name="sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.ContextoActivity" />
+        <activity android:name="sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.UserActivity" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"

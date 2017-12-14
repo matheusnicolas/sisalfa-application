@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tUserEmail;
     private UrlRequest urlRequest;
     User usuario = new User();
+    private ImageButton btnUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         successRequest = true;
         tUserName = (TextView)findViewById(R.id.user_name);
         tUserEmail = (TextView)findViewById(R.id.user_email);
-
+        btnUser = (ImageButton) findViewById(R.id.button_user);
         //Retorna o usuário atualmente logado
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -60,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
         }else{
             goLoginScreen();
         }
-
     }
 
     //Método que retorna para tela de login
@@ -129,4 +131,8 @@ public class MainActivity extends AppCompatActivity {
         return json;
     }
 
+    public void UserInformation(View view) {
+        Intent intent = new Intent(this, UserActivity.class);
+        startActivity(intent);
+    }
 }

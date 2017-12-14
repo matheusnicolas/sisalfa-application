@@ -16,7 +16,7 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name=".sisalfa.android.com.app.application.MainActivity"></activity>
+        <activity android:name=".sisalfa.android.com.app.application.MainActivity" />
         <activity android:name=".sisalfa.android.com.app.application.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".sisalfa.android.com.app.application.ContextoActivity"></activity>
+        <activity android:name=".sisalfa.android.com.app.application.ContextoActivity" />
+        <activity android:name=".sisalfa.android.com.app.application.UserActivity"></activity>
     </application>
 
 </manifest>
