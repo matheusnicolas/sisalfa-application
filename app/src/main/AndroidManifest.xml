@@ -25,7 +25,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".sisalfa.android.com.app.application.ContextoActivity" />
-        <activity android:name=".sisalfa.android.com.app.application.UserActivity"></activity>
+        <activity android:name=".sisalfa.android.com.app.application.UserActivity" />
+        <activity android:name=".sisalfa.android.com.app.application.DesafioActivity" />
+        <activity android:name=".sisalfa.android.com.app.application.AddDesafioActivity"></activity>
     </application>
 
 </manifest>

@@ -56,9 +56,6 @@ public class MainActivity extends AppCompatActivity {
             String name = user.getDisplayName();
             String email = user.getEmail();
             tUserName.setText("Agora você está logado, " + name + "!");
-            tUserEmail.setText("Email: " + email);
-            usuario.setEmail(user.getEmail());
-
             JsonObjectRequest request = enviarUsuario();
         }else{
             goLoginScreen();
@@ -80,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private JsonObjectRequest enviarUsuario(){
-        String url = "http://app.sisalfa.dcx.ufpb.br/api/addUser";
+        String url = "http://192.168.0.111:8080/meuProjetoWeb/webapi/profiles";
         JSONObject usuario = montagemUsuario();
         JsonObjectRequest request = new JsonObjectRequest(
                 url,
@@ -133,6 +130,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void UserInformation(View view) {
         Intent intent = new Intent(this, UserActivity.class);
+        startActivity(intent);
+    }
+
+    public void challengeScreen(View view) {
+        Intent intent = new Intent(this, DesafioActivity.class);
         startActivity(intent);
     }
 }

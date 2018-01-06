@@ -516,6 +516,10 @@
         "source": "C:\\Users\\Proext\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.6.0.aar\\7c14e20a6fa4cc2021032ed3897963bb\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
+        "merged": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_desafio.xml.flat",
+        "source": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\src\\main\\res\\layout\\activity_desafio.xml"
+    },
+    {
         "merged": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
@@ -1174,6 +1178,10 @@
     {
         "merged": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_desafio.xml.flat",
+        "source": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\src\\main\\res\\layout\\item_desafio.xml"
     },
     {
         "merged": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -2086,6 +2094,10 @@
     {
         "merged": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\Pichau\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9dacdf394a2d893b776668d65bfd11b7\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_desafio.xml.flat",
+        "source": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\src\\main\\res\\layout\\activity_add_desafio.xml"
     },
     {
         "merged": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_disabled.xml.flat",

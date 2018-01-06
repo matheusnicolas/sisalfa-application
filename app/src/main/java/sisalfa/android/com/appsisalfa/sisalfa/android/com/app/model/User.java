@@ -1,12 +1,16 @@
 package sisalfa.android.com.appsisalfa.sisalfa.android.com.app.model;
 
-/**
- * Created by Pichau on 08/12/2017.
- */
+import java.io.Serializable;
 
-public class User {
+public class User implements Serializable{
 
     private String email;
+    private int id;
+
+    public User(String email, int id){
+        this.email = email;
+        this.id = id;
+    }
 
     public User(){
 
@@ -18,6 +22,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getId(){
+        return this.id;
+    }
+
+    public void setId(int id){
+        this.id = id;
     }
 
 
