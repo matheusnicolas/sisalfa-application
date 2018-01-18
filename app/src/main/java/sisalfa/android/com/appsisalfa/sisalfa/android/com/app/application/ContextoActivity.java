@@ -1,8 +1,10 @@
 package sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -22,7 +24,7 @@ import sisalfa.android.com.appsisalfa.sisalfa.android.com.app.model.Contexto;
 
 public class ContextoActivity extends AppCompatActivity {
 
-    private static final String BASE_URL = "http://192.168.0.111:8080/meuProjetoWeb/webapi/";
+    private static final String BASE_URL = "http://192.168.0.115:8080/meuProjetoWeb/webapi/";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,4 +58,9 @@ public class ContextoActivity extends AppCompatActivity {
     }
 
 
+    public void addContextoScreen(View view) {
+        Intent intent = new Intent(this, AddContextoActivity.class);
+        startActivity(intent);
+
+    }
 }

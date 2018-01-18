@@ -1,4 +1,4 @@
-#Fri Jan 05 19:55:31 BRST 2018
+#Thu Jan 18 18:43:17 BRST 2018
 base.0=C\:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
 path.0=classes.dex
 renamed.0=classes.dex

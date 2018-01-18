@@ -7,17 +7,18 @@
     android:orientation="vertical"
     tools:context="sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.ContextoActivity">
 
-    <com.android.volley.toolbox.NetworkImageView
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:id="@+id/imgContexto"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:lines="2"
-        android:ellipsize="end"
-        android:text="@null"/>
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_add"
+        android:layout_gravity="center"
+        android:onClick="addContextoScreen"/>
+
+
 
 </LinearLayout>

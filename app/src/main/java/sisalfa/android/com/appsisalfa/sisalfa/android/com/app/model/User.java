@@ -4,11 +4,11 @@ import java.io.Serializable;
 
 public class User implements Serializable{
 
-    private String email;
+    private String userEmail;
     private int id;
 
     public User(String email, int id){
-        this.email = email;
+        this.userEmail = email;
         this.id = id;
     }
 
@@ -16,12 +16,12 @@ public class User implements Serializable{
 
     }
 
-    public String getEmail() {
-        return email;
+    public String getUserEmail() {
+        return userEmail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 
     public int getId(){

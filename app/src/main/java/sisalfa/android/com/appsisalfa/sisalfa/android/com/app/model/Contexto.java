@@ -8,6 +8,7 @@ public class Contexto implements Serializable{
     private Long id;
     private String palavra_contexto;
     private String imagem;
+    private String audio;
     private String id_usuario;
 
     public Contexto(String palavra_contexto, String link_imagem, String id_usuario){
@@ -42,6 +43,14 @@ public class Contexto implements Serializable{
 
     public void setImagem(String imagem) {
         this.imagem = imagem;
+    }
+
+    public String getAudio(){
+        return this.audio;
+    }
+
+    public void setAudio(String audio){
+        this.audio = audio;
     }
 
     public String getId_usuario() {

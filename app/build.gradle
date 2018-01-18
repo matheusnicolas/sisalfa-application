@@ -35,8 +35,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.0'
-    compile 'com.mcxiaoke.volley:library:1.0.19'
-    compile project(':volley')
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
 }
 apply plugin: 'com.google.gms.google-services'

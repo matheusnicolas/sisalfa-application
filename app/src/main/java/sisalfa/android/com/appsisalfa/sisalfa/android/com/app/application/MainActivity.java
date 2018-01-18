@@ -5,61 +5,87 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.RetryPolicy;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.w3c.dom.Text;
-
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import sisalfa.android.com.appsisalfa.R;
 import sisalfa.android.com.appsisalfa.sisalfa.android.com.app.connection.UrlRequest;
 import sisalfa.android.com.appsisalfa.sisalfa.android.com.app.model.User;
+import sisalfa.android.com.appsisalfa.sisalfa.android.com.app.sisalfapi.UsuarioService;
 
 //Activity o qual o usuário é redirecionado a partir da tela de login
 public class MainActivity extends AppCompatActivity {
 
-    private RequestQueue queueVolley;
-    private boolean successRequest;
     private TextView tUserName;
     private TextView tUserEmail;
-    private UrlRequest urlRequest;
-    User usuario = new User();
+    private String userEmail;
     private ImageButton btnUser;
+    private static UrlRequest urlT = new UrlRequest();
+    private static final String BASE_URL = urlT.getTesteLocal();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        queueVolley = Volley.newRequestQueue(this);
-        successRequest = true;
+
         tUserName = (TextView)findViewById(R.id.user_name);
         tUserEmail = (TextView)findViewById(R.id.user_email);
         btnUser = (ImageButton) findViewById(R.id.button_user);
         //Retorna o usuário atualmente logado
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        this.userEmail = user.getEmail();
 
         //Se o usuário não for nulo, existe algum usuário assim, as informações do usuário são recuperadas a seguir, senão se assume que o usuário deslogou, voltando para a tela de login
         if(user != null){
+            sendUserToSisalfaApi();
             String name = user.getDisplayName();
             String email = user.getEmail();
             tUserName.setText("Agora você está logado, " + name + "!");
-            JsonObjectRequest request = enviarUsuario();
         }else{
             goLoginScreen();
         }
+    }
+
+
+    public void sendUserToSisalfaApi(){
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+        UsuarioService service = retrofit.create(UsuarioService.class);
+
+        User u = new User();
+        u.setUserEmail(userEmail);
+        Log.i("EMAIL", "Email do usuário: " + u.getUserEmail());
+
+        Call<Boolean> usuario = service.insertUser(u);
+        usuario.enqueue(new Callback<Boolean>() {
+            @Override
+            public void onResponse(Call<Boolean> call, Response<Boolean> response) {
+                if(response.isSuccessful()){
+                    if(response.body()){
+                        Toast.makeText(getApplicationContext(), "Usuário cadastrado com Sucesso!",  Toast.LENGTH_LONG).show();
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Usuário não foi cadastrado!", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(getApplicationContext(), "Erro: " + response.code(), Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Boolean> call, Throwable t) {
+
+            }
+        });
+
     }
 
     //Método que retorna para tela de login
@@ -76,58 +102,6 @@ public class MainActivity extends AppCompatActivity {
         goLoginScreen();
     }
 
-    private JsonObjectRequest enviarUsuario(){
-        String url = "http://192.168.0.111:8080/meuProjetoWeb/webapi/profiles";
-        JSONObject usuario = montagemUsuario();
-        JsonObjectRequest request = new JsonObjectRequest(
-                url,
-                usuario,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        Toast.makeText(getApplicationContext(), "Você está cadastrado no Sisalfa!", Toast.LENGTH_SHORT).show();
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), "Erro de sincronização com o serviço!", Toast.LENGTH_SHORT).show();
-                        Log.i("Request erro", error.toString());
-                        successRequest = false;
-                    }
-                });
-        request.setRetryPolicy(new RetryPolicy() {
-            @Override
-            public int getCurrentTimeout() {
-                return 12000;
-            }
-
-            @Override
-            public int getCurrentRetryCount() {
-                return 12000;
-            }
-
-            @Override
-            public void retry(VolleyError error) throws VolleyError {
-
-            }
-        });
-        queueVolley.add(request);
-        return request;
-    }
-
-    private JSONObject montagemUsuario(){
-        JSONObject json = new JSONObject();
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String email = user.getEmail();
-        try {
-            json.put("nome", email);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return json;
-    }
-
     public void UserInformation(View view) {
         Intent intent = new Intent(this, UserActivity.class);
         startActivity(intent);
@@ -135,6 +109,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void challengeScreen(View view) {
         Intent intent = new Intent(this, DesafioActivity.class);
+        startActivity(intent);
+    }
+
+    public void contextoScreen(View view){
+        Intent intent = new Intent(this, ContextoActivity.class);
         startActivity(intent);
     }
 }

@@ -30,7 +30,7 @@ import sisalfa.android.com.appsisalfa.sisalfa.android.com.app.model.Desafio;
 
 public class DesafioActivity extends AppCompatActivity {
 
-    private static final String BASE_URL = "http://192.168.0.111:8080/meuProjetoWeb/webapi/";
+    private static final String BASE_URL = "http://192.168.0.115:8080/meuProjetoWeb/webapi/";
     private Retrofit retrofit;
 
     @Override

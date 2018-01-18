@@ -8,6 +8,7 @@ public class UrlRequest {
     private String addContexto;
     private String addDesafio;
     private String addUser;
+    private String testeLocal;
 
     public UrlRequest(){
         this.getAllContextos = "http://app.sisalfa.dcx.ufpb.br/api/getAllContext";
@@ -15,6 +16,7 @@ public class UrlRequest {
         this.addContexto = "http://app.sisalfa.dcx.ufpb.br/api/addContext";
         this.addDesafio = "http://app.sisalfa.dcx.ufpb.br/api/addChallenge";
         this.addUser = "http://app.sisalfa.dcx.ufpb.br/api/addUser";
+        this.testeLocal = "http://192.168.0.115:8080/meuProjetoWeb/webapi/";
     }
 
     public String getGetAllContextos() {
@@ -55,5 +57,9 @@ public class UrlRequest {
 
     public void setAddUser(String addUser) {
         this.addUser = addUser;
+    }
+
+    public String getTesteLocal(){
+        return "http://192.168.0.115:8080/meuProjetoWeb/webapi/";
     }
 }
