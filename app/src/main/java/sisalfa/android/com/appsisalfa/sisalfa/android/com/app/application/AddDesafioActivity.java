@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.net.Uri;
 import android.os.Environment;
@@ -49,7 +50,7 @@ public class AddDesafioActivity extends AppCompatActivity implements View.OnClic
     private static final String BASE_URL = urlT.getTesteLocal();
     private EditText ePalavra, eUsuario;
 
-    private Button mCadastroBtn, mGaleriaBtn, mGravarBtn;
+    private Button mCadastroBtn, mGaleriaBtn, mGravarBtn, mPlayBtn;
 
     private TextView textViewGravar;
 
@@ -76,12 +77,13 @@ public class AddDesafioActivity extends AppCompatActivity implements View.OnClic
         mGravarBtn = (Button)findViewById(R.id.btn_gravar);
         mCadastroBtn = (Button)findViewById(R.id.btn_enviar);
         mGaleriaBtn = (Button)findViewById(R.id.btn_galeria);
-
+        mPlayBtn = (Button)findViewById(R.id.btn_reproduzir);
         textViewGravar = (TextView) findViewById(R.id.audio_recorder);
 
         imgGaleria = (ImageView)findViewById(R.id.img_galeria);
         mCadastroBtn.setOnClickListener(this);
         mGaleriaBtn.setOnClickListener(this);
+        mPlayBtn.setOnClickListener(this);
 
         successRequest = true;
 
@@ -180,6 +182,16 @@ public class AddDesafioActivity extends AppCompatActivity implements View.OnClic
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(Intent.createChooser(intent, "Select Picture"), SELECT_PICTURE);
+                break;
+            case R.id.btn_reproduzir:
+                MediaPlayer mediaPlayer = new MediaPlayer();
+                try{
+                    mediaPlayer.setDataSource(mFileName);
+                    mediaPlayer.prepare();
+                    mediaPlayer.start();
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
                 break;
 
         }

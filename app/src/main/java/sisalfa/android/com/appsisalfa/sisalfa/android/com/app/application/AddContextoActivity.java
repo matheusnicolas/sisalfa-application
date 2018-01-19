@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.net.Uri;
 import android.os.Environment;
@@ -48,7 +49,7 @@ public class AddContextoActivity extends AppCompatActivity implements View.OnCli
     private static UrlRequest urlT = new UrlRequest();
     private static final String BASE_URL = urlT.getTesteLocal();
     private EditText mNome;
-    private Button mGaleriaBtn, mGravacaoBtn, mEnviarBtn;
+    private Button mGaleriaBtn, mGravacaoBtn, mEnviarBtn, mPlayBtn;
     private TextView mLabelgravacao;
     private ImageView mImagemContexto;
     private MediaRecorder mRecorder;
@@ -74,10 +75,10 @@ public class AddContextoActivity extends AppCompatActivity implements View.OnCli
         mGaleriaBtn = (Button)findViewById(R.id.btn_galeria);
         mGravacaoBtn = (Button)findViewById(R.id.btn_gravar);
         mEnviarBtn = (Button)findViewById(R.id.btn_enviar);
-
+        mPlayBtn = (Button)findViewById(R.id.btn_reproduzir);
         mGaleriaBtn.setOnClickListener(this);
         mEnviarBtn.setOnClickListener(this);
-
+        mPlayBtn.setOnClickListener(this);
         mLabelgravacao = (TextView)findViewById(R.id.label_recorder);
         mImagemContexto = (ImageView)findViewById(R.id.img_galeria);
 
@@ -172,6 +173,16 @@ public class AddContextoActivity extends AppCompatActivity implements View.OnCli
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(Intent.createChooser(intent, "Select Picture"), SELECT_PICTURE);
+                break;
+            case R.id.btn_reproduzir:
+                MediaPlayer mediaPlayer = new MediaPlayer();
+                try{
+                    mediaPlayer.setDataSource(mFileName);
+                    mediaPlayer.prepare();
+                    mediaPlayer.start();
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
                 break;
         }
     }
