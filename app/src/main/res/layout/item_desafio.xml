@@ -5,10 +5,9 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/fotoImageView"
+        android:id="@+id/decodedimg64"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:background="@color/colorAccent"
         android:layout_gravity="center_horizontal"/>
 
     <TextView
@@ -18,6 +17,13 @@
         android:text="@string/app_name"
         android:gravity="center_horizontal"
         android:textAllCaps="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Play"
+        android:id="@+id/audio_play"/>
 
 
 

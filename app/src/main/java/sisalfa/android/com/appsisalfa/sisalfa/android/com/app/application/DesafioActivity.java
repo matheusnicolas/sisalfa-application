@@ -32,37 +32,42 @@ public class DesafioActivity extends AppCompatActivity {
 
     private static final String BASE_URL = "http://192.168.0.115:8080/meuProjetoWeb/webapi/";
     private Retrofit retrofit;
+    private RecyclerView recyclerView;
+    private ListaDesafiosAdapter listaDesafiosAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_desafio);
+        recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
+        listaDesafiosAdapter = new ListaDesafiosAdapter(this);
+        recyclerView.setAdapter(listaDesafiosAdapter);
+        final GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
+        recyclerView.setLayoutManager(layoutManager);
+
         Gson g = new GsonBuilder().registerTypeAdapter(Desafio.class, new DesafioDec()).create();
         retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create(g)).build();
+
         obterDados();
+
     }
 
     public void obterDados(){
         DesafioService service = retrofit.create(DesafioService.class);
-        Call<List<Desafio>> listaDesafios = service.getDesafios();
-
-        listaDesafios.enqueue(new Callback<List<Desafio>>() {
+        Call<DesafioResposta> desafioRespostaCall = service.getDesafios();
+        desafioRespostaCall.enqueue(new Callback<DesafioResposta>() {
             @Override
-            public void onResponse(Call<List<Desafio>> call, Response<List<Desafio>> response) {
-                if(response.isSuccessful()){
-                    List<Desafio> desafios = response.body();
-                    for(Desafio d: desafios){
-                        Log.i("DESAFIO", d.getPalavra_desafio() + "---" + d.getImagem());
-                        Log.i("DESAFIO", "-----------");
-                    }
-                }else{
-                    Toast.makeText(getApplicationContext(), "Erro: " + response.code(), Toast.LENGTH_LONG).show();
+            public void onResponse(Call<DesafioResposta> call, Response<DesafioResposta> response) {
+                if (response.isSuccessful()) {
+                    DesafioResposta desafioResposta = response.body();
+                    ArrayList<Desafio> listaDesafio = desafioResposta.getResults();
+                    listaDesafiosAdapter.adicionarListaDesafios(listaDesafio);
                 }
             }
 
             @Override
-            public void onFailure(Call<List<Desafio>> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "Erro: " + t.getMessage(), Toast.LENGTH_LONG).show();
+            public void onFailure(Call<DesafioResposta> call, Throwable t) {
+
             }
         });
 
