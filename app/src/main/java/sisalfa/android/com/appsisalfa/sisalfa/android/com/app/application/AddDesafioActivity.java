@@ -93,7 +93,6 @@ public class AddDesafioActivity extends AppCompatActivity implements View.OnClic
         mGravarBtn.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-
                 if(motionEvent.getAction() == MotionEvent.ACTION_DOWN){
 
                     startRecording();
@@ -102,11 +101,9 @@ public class AddDesafioActivity extends AppCompatActivity implements View.OnClic
                 }else if(motionEvent.getAction() == MotionEvent.ACTION_UP){
 
                     stopRecording();
-                    textViewGravar.setText("Parou de gravar...");
+                    textViewGravar.setText("Gravação parou...");
                     audioBase64();
                 }
-
-
                 return false;
             }
         });

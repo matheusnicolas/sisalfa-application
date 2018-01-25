@@ -60,6 +60,6 @@ public class UrlRequest {
     }
 
     public String getTesteLocal(){
-        return "http://192.168.0.115:8080/meuProjetoWeb/webapi/";
+        return "http://192.168.0.100:8080/meuProjetoWeb/webapi/";
     }
 }
