@@ -34,43 +34,44 @@ public class DesafioActivity extends AppCompatActivity {
     private Retrofit retrofit;
     private RecyclerView recyclerView;
     private ListaDesafiosAdapter listaDesafiosAdapter;
+    private static final String TAG = "SISALFA";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_desafio);
+
         recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         listaDesafiosAdapter = new ListaDesafiosAdapter(this);
         recyclerView.setAdapter(listaDesafiosAdapter);
+        recyclerView.setHasFixedSize(true);
+
         final GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         recyclerView.setLayoutManager(layoutManager);
 
+
         Gson g = new GsonBuilder().registerTypeAdapter(Desafio.class, new DesafioDec()).create();
         retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create(g)).build();
-
         obterDados();
-
     }
 
     public void obterDados(){
         DesafioService service = retrofit.create(DesafioService.class);
-        Call<DesafioResposta> desafioRespostaCall = service.getDesafios();
-        desafioRespostaCall.enqueue(new Callback<DesafioResposta>() {
+        Call<List<Desafio>> desafios = service.getDesafios();
+        desafios.enqueue(new Callback<List<Desafio>>() {
             @Override
-            public void onResponse(Call<DesafioResposta> call, Response<DesafioResposta> response) {
-                if (response.isSuccessful()) {
-                    DesafioResposta desafioResposta = response.body();
-                    ArrayList<Desafio> listaDesafio = desafioResposta.getResults();
+            public void onResponse(Call<List<Desafio>> call, Response<List<Desafio>> response) {
+                if(response.isSuccessful()){
+                    List<Desafio> listaDesafio = response.body();
                     listaDesafiosAdapter.adicionarListaDesafios(listaDesafio);
                 }
             }
 
             @Override
-            public void onFailure(Call<DesafioResposta> call, Throwable t) {
+            public void onFailure(Call<List<Desafio>> call, Throwable t) {
 
             }
         });
-
     }
 
     public void addChallengeScreen(View view) {

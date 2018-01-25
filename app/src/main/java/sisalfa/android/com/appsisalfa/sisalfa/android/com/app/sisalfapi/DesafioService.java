@@ -13,7 +13,7 @@ import sisalfa.android.com.appsisalfa.sisalfa.android.com.app.model.Desafio;
 public interface DesafioService {
 
     @GET("desafios")
-    Call<DesafioResposta> getDesafios();
+    Call<List<Desafio>> getDesafios();
 
     @POST("desafios")
     Call<Boolean> insertDesafio(@Body Desafio desafio);

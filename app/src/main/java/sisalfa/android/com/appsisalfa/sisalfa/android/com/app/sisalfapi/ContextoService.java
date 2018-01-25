@@ -1,5 +1,6 @@
 package sisalfa.android.com.appsisalfa.sisalfa.android.com.app.sisalfapi;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;

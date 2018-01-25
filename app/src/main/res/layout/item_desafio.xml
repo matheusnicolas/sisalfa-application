@@ -5,13 +5,13 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/decodedimg64"
+        android:id="@+id/imageView"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_gravity="center_horizontal"/>
 
     <TextView
-        android:id="@+id/palavraTextView"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Play"
-        android:id="@+id/audio_play"/>
+        android:id="@+id/button"/>
 
 
 

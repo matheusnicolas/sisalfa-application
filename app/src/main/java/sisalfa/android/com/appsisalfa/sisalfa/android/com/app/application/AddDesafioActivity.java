@@ -48,7 +48,7 @@ public class AddDesafioActivity extends AppCompatActivity implements View.OnClic
 
     private static UrlRequest urlT = new UrlRequest();
     private static final String BASE_URL = urlT.getTesteLocal();
-    private EditText ePalavra, eUsuario;
+    private EditText ePalavra;
 
     private Button mCadastroBtn, mGaleriaBtn, mGravarBtn, mPlayBtn;
 

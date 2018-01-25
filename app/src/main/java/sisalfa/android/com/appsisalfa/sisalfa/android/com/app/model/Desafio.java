@@ -3,7 +3,7 @@ package sisalfa.android.com.appsisalfa.sisalfa.android.com.app.model;
 
 import java.io.Serializable;
 
-public class Desafio implements Serializable {
+public class Desafio implements Serializable{
 
     private long id;
     private String palavra_desafio;
