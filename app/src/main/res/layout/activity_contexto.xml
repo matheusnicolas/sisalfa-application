@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/sisalfa_gradient"
-    tools:context="sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.ContextoActivity">
+    tools:context=".application.ContextoActivity">
 
     <TextView
         android:layout_width="wrap_content"

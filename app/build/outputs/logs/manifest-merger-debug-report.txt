@@ -172,14 +172,14 @@ ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManif
 		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:19:13-52
 	android:name
 		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:18:13-58
-activity#sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.MainActivity
-ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:21:9-86
+activity#sisalfa.android.com.appsisalfa.application.MainActivity
+ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:21:9-62
 	android:name
-		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:21:19-83
-activity#sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.LoginActivity
+		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:21:19-59
+activity#sisalfa.android.com.appsisalfa.application.LoginActivity
 ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:22:9-28:20
 	android:name
-		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:22:19-84
+		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:22:19-60
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
@@ -190,26 +190,26 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
 		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:26:27-74
-activity#sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.ContextoActivity
-ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:29:9-90
+activity#sisalfa.android.com.appsisalfa.application.ContextoActivity
+ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:29:9-66
 	android:name
-		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:29:19-87
-activity#sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.UserActivity
-ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:30:9-86
+		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:29:19-63
+activity#sisalfa.android.com.appsisalfa.application.UserActivity
+ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:30:9-62
 	android:name
-		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:30:19-83
-activity#sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.DesafioActivity
-ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:31:9-89
+		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:30:19-59
+activity#sisalfa.android.com.appsisalfa.application.DesafioActivity
+ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:31:9-65
 	android:name
-		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:31:19-86
-activity#sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.AddDesafioActivity
-ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:32:9-92
+		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:31:19-62
+activity#sisalfa.android.com.appsisalfa.application.AddDesafioActivity
+ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:32:9-68
 	android:name
-		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:32:19-89
-activity#sisalfa.android.com.appsisalfa.sisalfa.android.com.app.application.AddContextoActivity
-ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:33:9-102
+		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:32:19-65
+activity#sisalfa.android.com.appsisalfa.application.AddContextoActivity
+ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:33:9-78
 	android:name
-		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:33:19-90
+		ADDED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml:33:19-66
 uses-sdk
 INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Pichau\Desktop\sisalfa-application\app\src\main\AndroidManifest.xml
