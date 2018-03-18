@@ -37,10 +37,7 @@ import java.io.InputStream;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 import sisalfa.android.com.appsisalfa.R;
-import sisalfa.android.com.appsisalfa.connection.UrlRequest;
 import sisalfa.android.com.appsisalfa.model.Desafio;
 import sisalfa.android.com.appsisalfa.retrofinterface.RetrofitInterface;
 import sisalfa.android.com.appsisalfa.sisalfapi.SisalfaService;
@@ -235,7 +232,7 @@ public class AddDesafioActivity extends AppCompatActivity implements View.OnClic
         d.setAudio(encodeAudio);
         d.setImagem(encodeImage);
         d.setId_usuario(userEmail);
-        Call<Boolean> challenge = service.insertDesafio(d);
+        Call<Boolean> challenge = service.addChallenge(d);
         challenge.enqueue(new Callback<Boolean>() {
             @Override
             public void onResponse(Call<Boolean> call, Response<Boolean> response) {

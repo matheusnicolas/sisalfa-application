@@ -3,7 +3,7 @@ package sisalfa.android.com.appsisalfa.model;
 public class User{
 
     private String userEmail;
-    private int id;
+    private long id;
 
     public User(String email, int id){
         this.userEmail = email;
@@ -22,7 +22,7 @@ public class User{
         this.userEmail = userEmail;
     }
 
-    public int getId(){
+    public long getId(){
         return this.id;
     }
 

@@ -7,20 +7,14 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 import sisalfa.android.com.appsisalfa.R;
 
 import sisalfa.android.com.appsisalfa.adapter.ListaContextosAdapter;
-import sisalfa.android.com.appsisalfa.deserializer.ContextoDec;
 import sisalfa.android.com.appsisalfa.retrofinterface.RetrofitInterface;
 import sisalfa.android.com.appsisalfa.sisalfapi.SisalfaService;
 import sisalfa.android.com.appsisalfa.model.Contexto;
@@ -51,7 +45,7 @@ public class ContextoActivity extends AppCompatActivity {
 
     public void obterDados() {
         SisalfaService service = retrofitInterface.CallSisalfaApi();
-        Call<List<Contexto>> contextos = service.getContextos();
+        Call<List<Contexto>> contextos = service.getAllContexts();
         contextos.enqueue(new Callback<List<Contexto>>() {
             @Override
             public void onResponse(Call<List<Contexto>> call, Response<List<Contexto>> response) {

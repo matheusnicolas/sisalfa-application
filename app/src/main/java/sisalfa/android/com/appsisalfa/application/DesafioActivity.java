@@ -7,19 +7,13 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 import sisalfa.android.com.appsisalfa.R;
 import sisalfa.android.com.appsisalfa.adapter.ListaDesafiosAdapter;
-import sisalfa.android.com.appsisalfa.deserializer.DesafioDec;
 import sisalfa.android.com.appsisalfa.model.Desafio;
 import sisalfa.android.com.appsisalfa.retrofinterface.RetrofitInterface;
 import sisalfa.android.com.appsisalfa.sisalfapi.SisalfaService;
@@ -48,7 +42,7 @@ public class DesafioActivity extends AppCompatActivity {
 
     public void obterDados(){
         SisalfaService service = retrofitInterface.CallSisalfaApi();
-        Call<List<Desafio>> desafios = service.getDesafios();
+        Call<List<Desafio>> desafios = service.getAllChallenges();
         desafios.enqueue(new Callback<List<Desafio>>() {
             @Override
             public void onResponse(Call<List<Desafio>> call, Response<List<Desafio>> response) {

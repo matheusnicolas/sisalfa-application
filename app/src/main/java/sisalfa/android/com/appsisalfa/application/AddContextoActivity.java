@@ -37,10 +37,7 @@ import java.io.InputStream;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 import sisalfa.android.com.appsisalfa.R;
-import sisalfa.android.com.appsisalfa.connection.UrlRequest;
 import sisalfa.android.com.appsisalfa.model.Contexto;
 import sisalfa.android.com.appsisalfa.retrofinterface.RetrofitInterface;
 import sisalfa.android.com.appsisalfa.sisalfapi.SisalfaService;
@@ -235,7 +232,7 @@ public class AddContextoActivity extends AppCompatActivity implements View.OnCli
         c.setImagem(encodeImage);
         c.setId_usuario(userEmail);
 
-        Call<Boolean> context = service.insertContexto(c);
+        Call<Boolean> context = service.addContext(c);
         context.enqueue(new Callback<Boolean>() {
             @Override
             public void onResponse(Call<Boolean> call, Response<Boolean> response) {
