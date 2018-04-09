@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="sisalfa.android.com.appsisalfa"
+    package="br.ufpb.dcx.sisalfapp"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -16,10 +16,10 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <permission
-        android:name="sisalfa.android.com.appsisalfa.permission.C2D_MESSAGE"
+        android:name="br.ufpb.dcx.sisalfapp.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="sisalfa.android.com.appsisalfa.permission.C2D_MESSAGE" />
+    <uses-permission android:name="br.ufpb.dcx.sisalfapp.permission.C2D_MESSAGE" />
 
     <meta-data
         android:name="android.support.VERSION"
@@ -37,19 +37,19 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name="sisalfa.android.com.appsisalfa.application.MainActivity" />
-        <activity android:name="sisalfa.android.com.appsisalfa.application.LoginActivity" >
+        <activity android:name="br.ufpb.dcx.sisalfapp.MainActivity" />
+        <activity android:name="br.ufpb.dcx.sisalfapp.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="sisalfa.android.com.appsisalfa.application.ContextoActivity" />
-        <activity android:name="sisalfa.android.com.appsisalfa.application.UserActivity" />
-        <activity android:name="sisalfa.android.com.appsisalfa.application.DesafioActivity" />
-        <activity android:name="sisalfa.android.com.appsisalfa.application.AddDesafioActivity" />
-        <activity android:name="sisalfa.android.com.appsisalfa.application.AddContextoActivity" />
+        <activity android:name="br.ufpb.dcx.sisalfapp.ContextActivity" />
+        <activity android:name="br.ufpb.dcx.sisalfapp.UserActivity" />
+        <activity android:name="br.ufpb.dcx.sisalfapp.ChallengeActivity" />
+        <activity android:name="br.ufpb.dcx.sisalfapp.AddChallengeActivity" />
+        <activity android:name="br.ufpb.dcx.sisalfapp.AddContextActivity" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"
@@ -110,7 +110,7 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
 
-                <category android:name="sisalfa.android.com.appsisalfa" />
+                <category android:name="br.ufpb.dcx.sisalfapp" />
             </intent-filter>
         </receiver>
         <!--
@@ -134,7 +134,7 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="sisalfa.android.com.appsisalfa.firebaseinitprovider"
+            android:authorities="br.ufpb.dcx.sisalfapp.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
 
@@ -152,7 +152,7 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
         -->
         <provider
             android:name="com.facebook.internal.FacebookInitProvider"
-            android:authorities="sisalfa.android.com.appsisalfa.FacebookInitProvider"
+            android:authorities="br.ufpb.dcx.sisalfapp.FacebookInitProvider"
             android:exported="false" />
 
         <meta-data

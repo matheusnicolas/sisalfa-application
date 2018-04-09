@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="sisalfa.android.com.appsisalfa.test" >
+    package="br.ufpb.dcx.sisalfapp.test" >
 
     <uses-sdk
         android:minSdkVersion="23"
@@ -10,8 +10,8 @@
         android:name="android.support.test.runner.AndroidJUnitRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
-        android:label="Tests for sisalfa.android.com.appsisalfa"
-        android:targetPackage="sisalfa.android.com.appsisalfa" />
+        android:label="Tests for br.ufpb.dcx.sisalfapp"
+        android:targetPackage="br.ufpb.dcx.sisalfapp" />
 
     <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />

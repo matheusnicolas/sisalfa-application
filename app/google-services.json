@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:873653003880:android:10d388f87b70de53",
         "android_client_info": {
-          "package_name": "sisalfa.android.com.appsisalfa"
+          "package_name": "br.ufpb.dcx.sisalfapp"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "873653003880-rhopld2pbejduk88qaoh1d9lvdbbmadl.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "sisalfa.android.com.appsisalfa",
+            "package_name": "br.ufpb.dcx.sisalfapp",
             "certificate_hash": "5e0b06f74fc0a77f202adba9fdfd5c0f0db7aa90"
           }
         },
