@@ -2,6 +2,7 @@ package br.ufpb.dcx.sisalfapp;
 
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,11 +14,22 @@ import java.util.Properties;
 
 public class Util {
 
-    public static String getProperty(String key, Context context) throws IOException{
-        Properties properties = new Properties();;
-        AssetManager assetManager = context.getAssets();
-        InputStream inputStream = assetManager.open("config.properties");
-        properties.load(inputStream);
-        return properties.getProperty(key);
+    private Context context;
+    private Properties properties;
+
+    public Util(Context context){
+        this.context = context;
+        this.properties = new Properties();
+    }
+
+    public Properties getProperties(){
+        try{
+            AssetManager assetManager = context.getAssets();
+            InputStream inputStream = assetManager.open("config.properties");
+            properties.load(inputStream);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return properties;
     }
 }

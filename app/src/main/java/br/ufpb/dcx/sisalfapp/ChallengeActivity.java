@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Toast;
 
-import java.io.IOException;
 import java.util.List;
 
 import br.ufpb.dcx.sisalfapp.model.Challenge;
+import br.ufpb.dcx.sisalfapp.sisalfapi.SisalfaService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -21,25 +22,25 @@ public class ChallengeActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ChallengeListAdapter challengeListAdapter;
     private static final String TAG = "SISALFA_DESAFIO";
+    private ServiceGenerator serviceGenerator = new ServiceGenerator();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_desafio);
-        SisalfaRetrofitClient sisalfaRetrofitClient = new SisalfaRetrofitClient();
-
-        sisalfaRetrofitClient.loadAPI();
+        ServiceGenerator serviceGenerator = new ServiceGenerator();
         recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         challengeListAdapter = new ChallengeListAdapter(this);
         recyclerView.setAdapter(challengeListAdapter);
         recyclerView.setHasFixedSize(true);
         final GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         recyclerView.setLayoutManager(layoutManager);
-        getData();
+        getChallengeData();
     }
 
-    public void getData(){
-        Call<List<Challenge>> request = SisalfaRetrofitClient.SISALFASERVICE.getAllChallenges();
+    public void getChallengeData(){
+        SisalfaService service = serviceGenerator.loadApiCt(this);
+        Call<List<Challenge>> request = service.getAllChallenges();
         request.enqueue(new Callback<List<Challenge>>() {
             @Override
             public void onResponse(Call<List<Challenge>> call, Response<List<Challenge>> response) {
@@ -51,7 +52,7 @@ public class ChallengeActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Challenge>> call, Throwable t) {
-
+                Toast.makeText(getApplicationContext(), "Erro: " + t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }

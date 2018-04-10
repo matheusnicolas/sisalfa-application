@@ -8,6 +8,7 @@ MERGED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\Pichau\.
 MERGED from [com.facebook.android:facebook-android-sdk:4.28.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.28.0.aar\fe9092ff87cc1e4fd5b77dcfa1107292\AndroidManifest.xml:21:1-31:12
 MERGED from [com.google.firebase:firebase-core:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-core-12.0.1.aar\4d80bd0a0b54652f94e16fe12e3b5213\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-auth-12.0.1.aar\83c102040de4d6ec0c4c90533904bffb\AndroidManifest.xml:17:1-32:12
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-crash-12.0.1.aar\f368d908d196e66a3c12d170dd734fcb\AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\58aaf23b126bfdf2484c16772a741982\AndroidManifest.xml:17:1-31:12
 MERGED from [com.facebook.android:facebook-login:4.28.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\facebook-login-4.28.0.aar\0043145a79b68485daa8ff72c64c83f5\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-share:4.28.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\facebook-share-4.28.0.aar\f5e0d8283002954b992d330cc11a3e65\AndroidManifest.xml:21:1-31:12
@@ -30,6 +31,7 @@ MERGED from [com.facebook.android:facebook-applinks:4.28.0] C:\Users\Pichau\.gra
 MERGED from [com.facebook.android:facebook-messenger:4.28.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\facebook-messenger-4.28.0.aar\3f1a7e032de9cb9be8e328ab94449f0f\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-core:4.28.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\facebook-core-4.28.0.aar\1036fb2a63d299ed488559814d4ece9d\AndroidManifest.xml:21:1-45:12
 MERGED from [com.google.firebase:firebase-auth-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-12.0.1.aar\3f19023e845bf5b16a21a4ed1b65d1b9\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-crash-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-crash-license-12.0.1.aar\2cde9b2de686d3fa628586b009d6d21c\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:transition:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\45b11a318f810bbe2770e14e2524bd9f\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\3d22f0257ebb7744fcc93709c4acd58b\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\ba7426fc116a4a68a0f56cb5d6a36d69\AndroidManifest.xml:17:1-28:12
@@ -47,9 +49,9 @@ MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] C:\Us
 MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-12.0.1.aar\fd45014b9857507bd395f919fef49bf5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-analytics-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-12.0.1.aar\477f2ec0fb58e0d1f42c5c7126187fd0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-common-license-12.0.1.aar\3593101e18e5bcc4b622bbf0edb6eda7\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-12.0.1.aar\172dbb86cb40acef41300738fc31dcc2\AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\c126e9b3403c3253ade1b7b4c4d4252f\AndroidManifest.xml:17:1-30:12
 MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-12.0.1.aar\758a059dd577fbf4fb57beec25eee0b1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-12.0.1.aar\172dbb86cb40acef41300738fc31dcc2\AndroidManifest.xml:17:1-24:12
 INJECTED from C:\Users\Pichau\Desktop\git\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-36:12
 INJECTED from C:\Users\Pichau\Desktop\git\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-36:12
 INJECTED from C:\Users\Pichau\Desktop\git\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-36:12
@@ -69,6 +71,8 @@ INJECTED from C:\Users\Pichau\Desktop\git\sisalfa-application\app\src\main\Andro
 		ADDED from C:\Users\Pichau\Desktop\git\sisalfa-application\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
 ADDED from C:\Users\Pichau\Desktop\git\sisalfa-application\app\src\main\AndroidManifest.xml:5:5-67
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-crash-12.0.1.aar\f368d908d196e66a3c12d170dd734fcb\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-crash-12.0.1.aar\f368d908d196e66a3c12d170dd734fcb\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-analytics-12.0.1.aar\4205bed1aa63e03076cf8758a9ac8f1a\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-analytics-12.0.1.aar\4205bed1aa63e03076cf8758a9ac8f1a\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-12.0.1.aar\7cdb872b61c43baf358280df68d520b7\AndroidManifest.xml:23:5-67
@@ -105,6 +109,8 @@ MERGED from [com.google.firebase:firebase-core:12.0.1] C:\Users\Pichau\.gradle\c
 MERGED from [com.google.firebase:firebase-core:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-core-12.0.1.aar\4d80bd0a0b54652f94e16fe12e3b5213\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-auth-12.0.1.aar\83c102040de4d6ec0c4c90533904bffb\AndroidManifest.xml:22:5-30:19
 MERGED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-auth-12.0.1.aar\83c102040de4d6ec0c4c90533904bffb\AndroidManifest.xml:22:5-30:19
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-crash-12.0.1.aar\f368d908d196e66a3c12d170dd734fcb\AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-crash-12.0.1.aar\f368d908d196e66a3c12d170dd734fcb\AndroidManifest.xml:24:5-25:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\58aaf23b126bfdf2484c16772a741982\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\58aaf23b126bfdf2484c16772a741982\AndroidManifest.xml:25:5-29:19
 MERGED from [com.facebook.android:facebook-login:4.28.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\facebook-login-4.28.0.aar\0043145a79b68485daa8ff72c64c83f5\AndroidManifest.xml:28:5-29:19
@@ -145,6 +151,8 @@ MERGED from [com.facebook.android:facebook-core:4.28.0] C:\Users\Pichau\.gradle\
 MERGED from [com.facebook.android:facebook-core:4.28.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\facebook-core-4.28.0.aar\1036fb2a63d299ed488559814d4ece9d\AndroidManifest.xml:28:5-43:19
 MERGED from [com.google.firebase:firebase-auth-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-12.0.1.aar\3f19023e845bf5b16a21a4ed1b65d1b9\AndroidManifest.xml:22:5-20
 MERGED from [com.google.firebase:firebase-auth-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-12.0.1.aar\3f19023e845bf5b16a21a4ed1b65d1b9\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-crash-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-crash-license-12.0.1.aar\2cde9b2de686d3fa628586b009d6d21c\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-crash-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-crash-license-12.0.1.aar\2cde9b2de686d3fa628586b009d6d21c\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:transition:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\45b11a318f810bbe2770e14e2524bd9f\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:transition:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\45b11a318f810bbe2770e14e2524bd9f\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\3d22f0257ebb7744fcc93709c4acd58b\AndroidManifest.xml:25:5-29:19
@@ -179,12 +187,12 @@ MERGED from [com.google.firebase:firebase-analytics-license:12.0.1] C:\Users\Pic
 MERGED from [com.google.firebase:firebase-analytics-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-12.0.1.aar\477f2ec0fb58e0d1f42c5c7126187fd0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-common-license-12.0.1.aar\3593101e18e5bcc4b622bbf0edb6eda7\AndroidManifest.xml:22:5-20
 MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-common-license-12.0.1.aar\3593101e18e5bcc4b622bbf0edb6eda7\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-12.0.1.aar\172dbb86cb40acef41300738fc31dcc2\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-12.0.1.aar\172dbb86cb40acef41300738fc31dcc2\AndroidManifest.xml:22:5-20
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\c126e9b3403c3253ade1b7b4c4d4252f\AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\c126e9b3403c3253ade1b7b4c4d4252f\AndroidManifest.xml:24:5-28:19
 MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-12.0.1.aar\758a059dd577fbf4fb57beec25eee0b1\AndroidManifest.xml:22:5-20
 MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-12.0.1.aar\758a059dd577fbf4fb57beec25eee0b1\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-12.0.1.aar\172dbb86cb40acef41300738fc31dcc2\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-12.0.1.aar\172dbb86cb40acef41300738fc31dcc2\AndroidManifest.xml:22:5-20
 	android:supportsRtl
 		ADDED from C:\Users\Pichau\Desktop\git\sisalfa-application\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
@@ -253,6 +261,8 @@ MERGED from [com.google.firebase:firebase-core:12.0.1] C:\Users\Pichau\.gradle\c
 MERGED from [com.google.firebase:firebase-core:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-core-12.0.1.aar\4d80bd0a0b54652f94e16fe12e3b5213\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-auth-12.0.1.aar\83c102040de4d6ec0c4c90533904bffb\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-auth-12.0.1.aar\83c102040de4d6ec0c4c90533904bffb\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-crash-12.0.1.aar\f368d908d196e66a3c12d170dd734fcb\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-crash-12.0.1.aar\f368d908d196e66a3c12d170dd734fcb\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\58aaf23b126bfdf2484c16772a741982\AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:design:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\58aaf23b126bfdf2484c16772a741982\AndroidManifest.xml:21:5-23:62
 MERGED from [com.facebook.android:facebook-login:4.28.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\facebook-login-4.28.0.aar\0043145a79b68485daa8ff72c64c83f5\AndroidManifest.xml:24:5-26:41
@@ -297,6 +307,8 @@ MERGED from [com.facebook.android:facebook-core:4.28.0] C:\Users\Pichau\.gradle\
 MERGED from [com.facebook.android:facebook-core:4.28.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\facebook-core-4.28.0.aar\1036fb2a63d299ed488559814d4ece9d\AndroidManifest.xml:24:5-26:41
 MERGED from [com.google.firebase:firebase-auth-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-12.0.1.aar\3f19023e845bf5b16a21a4ed1b65d1b9\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-12.0.1.aar\3f19023e845bf5b16a21a4ed1b65d1b9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-crash-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-crash-license-12.0.1.aar\2cde9b2de686d3fa628586b009d6d21c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-crash-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-crash-license-12.0.1.aar\2cde9b2de686d3fa628586b009d6d21c\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\45b11a318f810bbe2770e14e2524bd9f\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\45b11a318f810bbe2770e14e2524bd9f\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\3d22f0257ebb7744fcc93709c4acd58b\AndroidManifest.xml:21:5-23:54
@@ -331,12 +343,12 @@ MERGED from [com.google.firebase:firebase-analytics-license:12.0.1] C:\Users\Pic
 MERGED from [com.google.firebase:firebase-analytics-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-12.0.1.aar\477f2ec0fb58e0d1f42c5c7126187fd0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-common-license-12.0.1.aar\3593101e18e5bcc4b622bbf0edb6eda7\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-common-license-12.0.1.aar\3593101e18e5bcc4b622bbf0edb6eda7\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-12.0.1.aar\172dbb86cb40acef41300738fc31dcc2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-12.0.1.aar\172dbb86cb40acef41300738fc31dcc2\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\c126e9b3403c3253ade1b7b4c4d4252f\AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\c126e9b3403c3253ade1b7b4c4d4252f\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-12.0.1.aar\758a059dd577fbf4fb57beec25eee0b1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-12.0.1.aar\758a059dd577fbf4fb57beec25eee0b1\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-12.0.1.aar\172dbb86cb40acef41300738fc31dcc2\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\Pichau\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-12.0.1.aar\172dbb86cb40acef41300738fc31dcc2\AndroidManifest.xml:20:5-44
 INJECTED from C:\Users\Pichau\Desktop\git\sisalfa-application\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Pichau\Desktop\git\sisalfa-application\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary

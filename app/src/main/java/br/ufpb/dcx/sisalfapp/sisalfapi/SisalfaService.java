@@ -38,7 +38,7 @@ public interface SisalfaService {
     Call<Boolean> deleteContext(@Path("id") long id);
 
     @POST("addChallenge")
-    Call<Boolean> addChallenge(@Body Challenge challenge);
+    Call<Challenge> addChallenge(@Body Challenge challenge);
 
     @GET("getAllChallenges")
     Call<List<Challenge>> getAllChallenges();
@@ -61,8 +61,8 @@ public interface SisalfaService {
     @GET("profiles/{idUser}")
     Call<User> getUser(@Path("idUser") long id);
 
-    @POST("profileS")
-    Call<Boolean> addUser(@Body User user);
+    @POST("profiles")
+    Call<User> addUser(@Body User user);
 
     @GET("getAllusers")
     Call<List<User>> getAllUsers();

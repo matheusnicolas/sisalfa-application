@@ -27,14 +27,13 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStream;
 
 import br.ufpb.dcx.sisalfapp.model.Challenge;
+import br.ufpb.dcx.sisalfapp.sisalfapi.SisalfaService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class AddChallengeActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -47,14 +46,12 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
     private String encodeImage, userEmail;
     private Recorder recorder = new Recorder();
     private EncoderDecoderClass encoderDecoderClass = new EncoderDecoderClass();
+    private ServiceGenerator serviceGenerator = new ServiceGenerator();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_desafio);
-        SisalfaRetrofitClient sisalfaRetrofitClient = new SisalfaRetrofitClient();
-        sisalfaRetrofitClient.loadAPI();
-
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         this.userEmail = user.getEmail();
         ePalavra = (EditText)findViewById(R.id.palavra);
@@ -83,7 +80,7 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
                 }else if(motionEvent.getAction() == MotionEvent.ACTION_UP){
                     recorder.stopRecording();
                     textViewGravar.setText("Gravação parou...");
-                    encoderDecoderClass.audioBase64();
+                    encoderDecoderClass.setEncodedAudio(encoderDecoderClass.audioBase64());
                 }
                 return false;
             }
@@ -94,25 +91,7 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.btn_enviar:
-                final Handler handler = new Handler(Looper.getMainLooper());
-                Thread thread = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        sendChallenge();
-                        handler.post(new Runnable() {
-                            @Override
-                            public void run() {
-                                if(successRequest){
-                                    ePalavra.setText("");
-                                    imgGaleria.setImageBitmap(null);
-                                    Toast.makeText(AddChallengeActivity.this,
-                                            "Challenge enviado com sucesso!", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
-                    }
-                });
-                thread.start();
+                sendChallenge();
                 break;
             case R.id.btn_galeria:
                 Intent intent = new Intent();
@@ -175,24 +154,25 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
         d.setAudio(encoderDecoderClass.getEncodedAudio());
         d.setImagem(encodeImage);
         d.setId_usuario(userEmail);
-        Call<Boolean> challenge = SisalfaRetrofitClient.SISALFASERVICE.addChallenge(d);
-        challenge.enqueue(new Callback<Boolean>() {
+        SisalfaService service = serviceGenerator.loadApiCt(this);
+        Call<Challenge> request = service.addChallenge(d);
+        request.enqueue(new Callback<Challenge>() {
             @Override
-            public void onResponse(Call<Boolean> call, Response<Boolean> response) {
+            public void onResponse(Call<Challenge> call, Response<Challenge> response) {
                 if(response.isSuccessful()){
-                    if(response.body()){
+                    if (response.body() != null) {
+                        ePalavra.setText("");
+                        imgGaleria.setImageBitmap(null);
                         Toast.makeText(getApplicationContext(), "Cadastrado com Sucesso!",  Toast.LENGTH_LONG).show();
-                    }else{
-                        Toast.makeText(getApplicationContext(), "Não foi cadastrado!", Toast.LENGTH_LONG).show();
                     }
-                }else{
-                    Toast.makeText(getApplicationContext(), "Erro: " + response.code(), Toast.LENGTH_LONG).show();
                 }
+
+
             }
 
             @Override
-            public void onFailure(Call<Boolean> call, Throwable t) {
-
+            public void onFailure(Call<Challenge> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Erro: " + t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }

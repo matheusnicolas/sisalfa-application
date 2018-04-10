@@ -24,8 +24,11 @@ public class EncoderDecoderClass {
     public String getEncodedAudio() {
         return this.encodedAudio;
     }
+    public void setEncodedAudio(String encodedAudio){
+        this.encodedAudio = encodedAudio;
+    }
 
-    public void audioBase64(){
+    public String audioBase64(){
         try{
             File file = new File(Environment.getExternalStorageDirectory() + "/recorded_audio.3gp");
             FileInputStream fileInputStream = new FileInputStream(file);
@@ -34,10 +37,11 @@ public class EncoderDecoderClass {
             this.encodedAudio = Base64.encodeToString(bytes, Base64.DEFAULT);
             Log.i("AUDIOCOD", "áudio codificado com sucesso!");
         }catch (FileNotFoundException e){
-            e.printStackTrace();
+            Log.i("FILENOTFOUND", "Message: " + e.getMessage());
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.i("IOEXCEPTION", "Message: " + e.getMessage());
         }
+        return this.encodedAudio;
     }
 
 

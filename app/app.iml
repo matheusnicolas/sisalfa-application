@@ -137,6 +137,7 @@
     <orderEntry type="library" name="com.google.firebase:firebase-common-license-12.0.1" level="project" />
     <orderEntry type="library" name="com.android.support.constraint:constraint-layout-1.0.2" level="project" />
     <orderEntry type="library" name="com.android.support:support-core-ui-26.1.0" level="project" />
+    <orderEntry type="library" name="com.google.firebase:firebase-crash-12.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test:runner-1.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="com.google.code.findbugs:jsr305:2.0.1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test.espresso:espresso-idling-resource-3.0.1" level="project" />
@@ -190,6 +191,7 @@
     <orderEntry type="library" name="com.google.android.gms:play-services-auth-base-12.0.1" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-tasks-license-12.0.1" level="project" />
     <orderEntry type="library" name="com.facebook.android:facebook-login-4.28.0" level="project" />
+    <orderEntry type="library" name="com.google.firebase:firebase-crash-license-12.0.1" level="project" />
     <orderEntry type="library" name="com.android.support:cardview-v7-26.1.0" level="project" />
     <orderEntry type="library" name="com.facebook.android:facebook-applinks-4.28.0" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-iid-license-12.0.1" level="project" />

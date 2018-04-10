@@ -3,16 +3,17 @@ package br.ufpb.dcx.sisalfapp.model;
 public class ContextM {
 
     private Long id;
-    private String palavra_contexto;
-    private String imagem;
     private String audio;
     private String id_usuario;
+    private String imagem;
+    private String palavra_contexto;
 
-    public ContextM(String palavra_contexto, String link_imagem, String audio, String id_usuario){
-        this.palavra_contexto = palavra_contexto;
-        this.imagem = link_imagem;
+
+    public ContextM(String audio, String id_usuario, String imagem, String palavra_contexto){
         this.audio = audio;
         this.id_usuario = id_usuario;
+        this.imagem = imagem;
+        this.palavra_contexto = palavra_contexto;
     }
 
     public ContextM(){
@@ -27,12 +28,20 @@ public class ContextM {
         this.id = id;
     }
 
-    public String getPalavra_contexto() {
-        return palavra_contexto;
+    public String getAudio() {
+        return audio;
     }
 
-    public void setPalavra_contexto(String palavra_contexto) {
-        this.palavra_contexto = palavra_contexto;
+    public void setAudio(String audio) {
+        this.audio = audio;
+    }
+
+    public String getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(String id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
     public String getImagem() {
@@ -43,19 +52,11 @@ public class ContextM {
         this.imagem = imagem;
     }
 
-    public String getAudio(){
-        return this.audio;
+    public String getPalavra_contexto() {
+        return palavra_contexto;
     }
 
-    public void setAudio(String audio){
-        this.audio = audio;
-    }
-
-    public String getId_usuario() {
-        return id_usuario;
-    }
-
-    public void setId_usuario(String id_usuario) {
-        this.id_usuario = id_usuario;
+    public void setPalavra_contexto(String palavra_contexto) {
+        this.palavra_contexto = palavra_contexto;
     }
 }

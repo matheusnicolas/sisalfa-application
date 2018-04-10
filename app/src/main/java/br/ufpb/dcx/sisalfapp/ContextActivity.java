@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Toast;
 
-import java.io.IOException;
 import java.util.List;
 
 import br.ufpb.dcx.sisalfapp.model.ContextM;
+import br.ufpb.dcx.sisalfapp.sisalfapi.SisalfaService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -22,15 +23,13 @@ public class ContextActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ContextListAdapter contextListAdapter;
     private static final String TAG = "SISALFA_CONTEXTO";
-
+    private ServiceGenerator serviceGenerator = new ServiceGenerator();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contexto);
-        SisalfaRetrofitClient sisalfaRetrofitClient = new SisalfaRetrofitClient();
-
-        sisalfaRetrofitClient.loadAPI();
+        ServiceGenerator serviceGenerator = new ServiceGenerator();
         recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         contextListAdapter = new ContextListAdapter(this);
         recyclerView.setAdapter(contextListAdapter);
@@ -38,12 +37,13 @@ public class ContextActivity extends AppCompatActivity {
 
         final GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         recyclerView.setLayoutManager(layoutManager);
-        obterDados();
+        getContextData();
 
     }
 
-    public void obterDados() {
-        Call<List<ContextM>> request = SisalfaRetrofitClient.SISALFASERVICE.getAllContexts();
+    public void getContextData() {
+        SisalfaService service = serviceGenerator.loadApiCt(this);
+        Call<List<ContextM>> request = service.getAllContexts();
         request.enqueue(new Callback<List<ContextM>>() {
             @Override
             public void onResponse(Call<List<ContextM>> call, Response<List<ContextM>> response) {
@@ -56,7 +56,7 @@ public class ContextActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<ContextM>> call, Throwable t) {
-
+                Toast.makeText(getApplicationContext(), "Erro: " + t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }
