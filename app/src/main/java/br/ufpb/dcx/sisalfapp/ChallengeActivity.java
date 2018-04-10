@@ -7,6 +7,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import java.io.IOException;
 import java.util.List;
 
 import br.ufpb.dcx.sisalfapp.model.Challenge;
@@ -25,7 +26,9 @@ public class ChallengeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_desafio);
-        new SisalfaRetrofitClient().loadAPI();
+        SisalfaRetrofitClient sisalfaRetrofitClient = new SisalfaRetrofitClient();
+
+        sisalfaRetrofitClient.loadAPI();
         recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         challengeListAdapter = new ChallengeListAdapter(this);
         recyclerView.setAdapter(challengeListAdapter);

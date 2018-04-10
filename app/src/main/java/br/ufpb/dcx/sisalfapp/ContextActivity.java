@@ -7,6 +7,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import java.io.IOException;
 import java.util.List;
 
 import br.ufpb.dcx.sisalfapp.model.ContextM;
@@ -27,7 +28,9 @@ public class ContextActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contexto);
+        SisalfaRetrofitClient sisalfaRetrofitClient = new SisalfaRetrofitClient();
 
+        sisalfaRetrofitClient.loadAPI();
         recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         contextListAdapter = new ContextListAdapter(this);
         recyclerView.setAdapter(contextListAdapter);

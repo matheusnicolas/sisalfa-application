@@ -8,9 +8,10 @@ public class ContextM {
     private String audio;
     private String id_usuario;
 
-    public ContextM(String palavra_contexto, String link_imagem, String id_usuario){
+    public ContextM(String palavra_contexto, String link_imagem, String audio, String id_usuario){
         this.palavra_contexto = palavra_contexto;
         this.imagem = link_imagem;
+        this.audio = audio;
         this.id_usuario = id_usuario;
     }
 

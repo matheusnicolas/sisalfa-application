@@ -14,22 +14,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SisalfaRetrofitClient {
 
-    private Context context;
     public static SisalfaService SISALFASERVICE = null;
 
     protected void loadAPI() {
-        try{
-            String urlAPI = Util.getProperty("urlapi", context.getApplicationContext());
-            Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl(urlAPI)
-                        .addConverterFactory(GsonConverterFactory
-                            .create()).build();
-
-            SisalfaRetrofitClient.SISALFASERVICE = retrofit.create(SisalfaService.class);
-        } catch(IOException e){
-            e.printStackTrace();
-        }
-
+        Retrofit.Builder builder = new Retrofit.Builder().baseUrl("http://192.168.1.107:8080/meuProjetoWeb/webapi/").addConverterFactory(GsonConverterFactory.create());
+        Retrofit retrofit = builder.build();
+        SisalfaRetrofitClient.SISALFASERVICE = retrofit.create(SisalfaService.class);
     }
 
 }

@@ -27,6 +27,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 
 import br.ufpb.dcx.sisalfapp.model.Challenge;
@@ -51,9 +52,11 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_desafio);
+        SisalfaRetrofitClient sisalfaRetrofitClient = new SisalfaRetrofitClient();
+        sisalfaRetrofitClient.loadAPI();
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         this.userEmail = user.getEmail();
-        new SisalfaRetrofitClient().loadAPI();
         ePalavra = (EditText)findViewById(R.id.palavra);
 
         mGravarBtn = (Button)findViewById(R.id.btn_gravar);

@@ -30,7 +30,7 @@ public final class R {
         public static final int messenger_button_send_white_small = 0x7f0a003b;
     }
     public static final class string {
-        public static final int messenger_send_button_text = 0x7f0d005c;
+        public static final int messenger_send_button_text = 0x7f0d005d;
     }
     public static final class style {
         public static final int MessengerButton = 0x7f0e00ae;

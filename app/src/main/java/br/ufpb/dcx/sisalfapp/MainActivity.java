@@ -13,10 +13,15 @@ import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.io.IOException;
+
+import br.ufpb.dcx.sisalfapp.sisalfapi.SisalfaService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import br.ufpb.dcx.sisalfapp.model.User;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 //Activity o qual o usuário é redirecionado a partir da tela de login
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new SisalfaRetrofitClient().loadAPI();
         tUserName = (TextView)findViewById(R.id.user_name);
         tUserEmail = (TextView)findViewById(R.id.user_email);
         btnUser = (ImageButton) findViewById(R.id.button_user);
@@ -40,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Se o usuário não for nulo, existe algum usuário assim, as informações do usuário são recuperadas a seguir, senão se assume que o usuário deslogou, voltando para a tela de login
         if(user != null){
+            Log.i("TESTE", "PASSOU POR AQUI");
             sendUserToSisalfaApi();
             String name = user.getDisplayName();
             String email = user.getEmail();
@@ -54,24 +59,23 @@ public class MainActivity extends AppCompatActivity {
         User u = new User();
         u.setUserEmail(userEmail);
         Log.i("EMAIL", "Email do usuário: " + u.getUserEmail());
-        Call<Boolean> usuario = SisalfaRetrofitClient.SISALFASERVICE.addUser(u);
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.1.107:8080/meuProjetoWeb/webapi/").addConverterFactory(GsonConverterFactory.create()).build();
+        SisalfaService requisition = retrofit.create(SisalfaService.class);
+        Call<Boolean> usuario = requisition.addUser(u);
         usuario.enqueue(new Callback<Boolean>() {
             @Override
             public void onResponse(Call<Boolean> call, Response<Boolean> response) {
                 if(response.isSuccessful()){
                     if(response.body()){
                         Toast.makeText(getApplicationContext(), "Usuário cadastrado com Sucesso!",  Toast.LENGTH_LONG).show();
-                    }else{
-                        Toast.makeText(getApplicationContext(), "Usuário não foi cadastrado!", Toast.LENGTH_LONG).show();
                     }
-                }else{
-                    Toast.makeText(getApplicationContext(), "Erro: " + response.code(), Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<Boolean> call, Throwable t) {
-
+                Toast.makeText(getApplicationContext(), "Ocorreu um erro: " + t.getMessage(), Toast.LENGTH_LONG).show();
+                Log.i("FALHOU", "Erro: " + t.getMessage());
             }
         });
 

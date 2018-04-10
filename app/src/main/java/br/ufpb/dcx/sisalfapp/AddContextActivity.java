@@ -27,6 +27,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 
 import br.ufpb.dcx.sisalfapp.model.ContextM;
@@ -51,9 +52,12 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_contexto);
+        SisalfaRetrofitClient sisalfaRetrofitClient = new SisalfaRetrofitClient();
+
+        sisalfaRetrofitClient.loadAPI();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         this.userEmail = user.getEmail();
-        new SisalfaRetrofitClient().loadAPI();
+
 
         mNome = (EditText)findViewById(R.id.nome);
 
@@ -82,6 +86,8 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
                     recorder.stopRecording();
                     mLabelgravacao.setText("Parou de gravar...");
                     encoderDecoderClass.audioBase64();
+                }else if(motionEvent.getAction() == MotionEvent.ACTION_CANCEL){
+                    Toast.makeText(getApplicationContext(), "Pressione e segure o botão de gravar!", Toast.LENGTH_SHORT).show();
                 }
                 return false;
             }
