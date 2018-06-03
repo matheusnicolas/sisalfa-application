@@ -51,6 +51,8 @@
         <activity android:name="br.ufpb.dcx.sisalfapp.ChallengeActivity" />
         <activity android:name="br.ufpb.dcx.sisalfapp.AddChallengeActivity" />
         <activity android:name="br.ufpb.dcx.sisalfapp.AddContextActivity" />
+        <activity android:name="br.ufpb.dcx.sisalfapp.RegisterOptionActivity" />
+        <activity android:name="br.ufpb.dcx.sisalfapp.FacebookRegisterActivity" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"

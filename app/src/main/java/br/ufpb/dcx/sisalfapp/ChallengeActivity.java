@@ -15,10 +15,10 @@ import br.ufpb.dcx.sisalfapp.sisalfapi.SisalfaService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import br.ufpb.dcx.sisalfapp.adapter.ChallengeListAdapter;
+//import br.ufpb.dcx.sisalfapp.adapter.ChallengeListAdapter;
 
 public class ChallengeActivity extends AppCompatActivity {
-
+/*
     private RecyclerView recyclerView;
     private ChallengeListAdapter challengeListAdapter;
     private static final String TAG = "SISALFA_DESAFIO";
@@ -62,4 +62,6 @@ public class ChallengeActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+}
+*/
 }

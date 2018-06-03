@@ -1,50 +1,6 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-11.0.4.aar\\becf026fde83693b39b66497eab06394\\res\\values-watch-v20\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11",
-                        "startColumns": "0,0,0,0,0,0,0,0",
-                        "startOffsets": "173,248,324,399,474,561,638,725",
-                        "endColumns": "74,75,74,74,86,76,86,75",
-                        "endOffsets": "247,323,398,473,560,637,724,800"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,134,214,293,372,463,544,635",
-                        "endColumns": "78,79,78,78,90,80,90,79",
-                        "endOffsets": "129,209,288,367,458,539,630,710"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\Proext\\Desktop\\AppSisalfa\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Proext\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-11.6.0.aar\\8e4a488849d0a75db97443b74d8daff6\\res\\values-watch-v20\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11",
-                        "startColumns": "0,0,0,0,0,0,0,0",
-                        "startOffsets": "171,246,322,397,472,559,636,723",
-                        "endColumns": "74,75,74,74,86,76,86,75",
-                        "endOffsets": "245,321,396,471,558,635,722,798"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,134,214,293,372,463,544,635",
-                        "endColumns": "78,79,78,78,90,80,90,79",
-                        "endOffsets": "129,209,288,367,458,539,630,710"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\Pichau\\Desktop\\git\\sisalfa-application\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
@@ -55,28 +11,6 @@
                         "startOffsets": "171,246,322,397,472,559,636,723",
                         "endColumns": "74,75,74,74,86,76,86,75",
                         "endOffsets": "245,321,396,471,558,635,722,798"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,134,214,293,372,463,544,635",
-                        "endColumns": "78,79,78,78,90,80,90,79",
-                        "endOffsets": "129,209,288,367,458,539,630,710"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\Pichau\\Desktop\\sisalfa-application\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Pichau\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-11.0.4.aar\\57e465d4d8decad9bc5b04b0e4a9cc2e\\res\\values-watch-v20\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11",
-                        "startColumns": "0,0,0,0,0,0,0,0",
-                        "startOffsets": "173,248,324,399,474,561,638,725",
-                        "endColumns": "74,75,74,74,86,76,86,75",
-                        "endOffsets": "247,323,398,473,560,637,724,800"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6,7,8,9",

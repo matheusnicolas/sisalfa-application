@@ -18,19 +18,21 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name="br.ufpb.dcx.sisalfapp.MainActivity" />
-        <activity android:name="br.ufpb.dcx.sisalfapp.LoginActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="br.ufpb.dcx.sisalfapp.ContextActivity" />
-        <activity android:name="br.ufpb.dcx.sisalfapp.UserActivity" />
-        <activity android:name="br.ufpb.dcx.sisalfapp.ChallengeActivity" />
-        <activity android:name="br.ufpb.dcx.sisalfapp.AddChallengeActivity" />
-        <activity android:name="br.ufpb.dcx.sisalfapp.AddContextActivity"></activity>
+        <activity android:name=".ContextActivity" />
+        <activity android:name=".UserActivity" />
+        <activity android:name=".ChallengeActivity" />
+        <activity android:name=".AddChallengeActivity" />
+        <activity android:name=".AddContextActivity" />
+        <activity android:name=".RegisterOptionActivity" />
+        <activity android:name=".FacebookRegisterActivity"></activity>
     </application>
 
 </manifest>

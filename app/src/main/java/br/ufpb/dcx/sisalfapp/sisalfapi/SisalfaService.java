@@ -1,23 +1,24 @@
 package br.ufpb.dcx.sisalfapp.sisalfapi;
 
-import java.util.List;
-
-import br.ufpb.dcx.sisalfapp.model.Challenge;
-import br.ufpb.dcx.sisalfapp.model.ContextM;
+import br.ufpb.dcx.sisalfapp.model.Login;
+import br.ufpb.dcx.sisalfapp.model.Token;
+import br.ufpb.dcx.sisalfapp.model.User;
 import retrofit2.Call;
 import retrofit2.http.Body;
-import retrofit2.http.DELETE;
-import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.PUT;
-import retrofit2.http.Path;
-import br.ufpb.dcx.sisalfapp.model.User;
 
 /**
  * Created by Pichau on 04/01/2018.
  */
 
 public interface SisalfaService {
+
+    @POST("users/login")
+    Call<Token> authenticate(@Body Login login);
+
+    @POST("users/")
+    Call<User> addUser(@Body User user);
+    /*
 
     @POST("addContext")
     Call<Boolean> addContext(@Body ContextM contextM);
@@ -72,6 +73,7 @@ public interface SisalfaService {
 
     @DELETE("deleteUser/{id}")
     Call<Boolean> deleteUser(@Path("id") long id);
+    */
 
 
 }

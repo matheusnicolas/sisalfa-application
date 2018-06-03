@@ -2,18 +2,18 @@ package br.ufpb.dcx.sisalfapp.model;
 
 public class ContextM {
 
-    private Long id;
-    private String audio;
-    private String id_usuario;
-    private String imagem;
-    private String palavra_contexto;
+    private long id;
+    private String name;
+    private String image;
+    private String sound;
+    private String video;
 
-
-    public ContextM(String audio, String id_usuario, String imagem, String palavra_contexto){
-        this.audio = audio;
-        this.id_usuario = id_usuario;
-        this.imagem = imagem;
-        this.palavra_contexto = palavra_contexto;
+    public ContextM(Long id, String name, String image, String sound, String video) {
+        this.id = id;
+        this.name = name;
+        this.image = image;
+        this.sound = sound;
+        this.video = video;
     }
 
     public ContextM(){
@@ -28,35 +28,35 @@ public class ContextM {
         this.id = id;
     }
 
-    public String getAudio() {
-        return audio;
+    public String getName() {
+        return name;
     }
 
-    public void setAudio(String audio) {
-        this.audio = audio;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getId_usuario() {
-        return id_usuario;
+    public String getImage() {
+        return image;
     }
 
-    public void setId_usuario(String id_usuario) {
-        this.id_usuario = id_usuario;
+    public void setImage(String image) {
+        this.image = image;
     }
 
-    public String getImagem() {
-        return imagem;
+    public String getSound() {
+        return sound;
     }
 
-    public void setImagem(String imagem) {
-        this.imagem = imagem;
+    public void setSound(String sound) {
+        this.sound = sound;
     }
 
-    public String getPalavra_contexto() {
-        return palavra_contexto;
+    public String getVideo() {
+        return video;
     }
 
-    public void setPalavra_contexto(String palavra_contexto) {
-        this.palavra_contexto = palavra_contexto;
+    public void setVideo(String video) {
+        this.video = video;
     }
 }

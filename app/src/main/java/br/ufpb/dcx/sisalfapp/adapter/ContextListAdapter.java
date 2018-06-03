@@ -1,5 +1,5 @@
 package br.ufpb.dcx.sisalfapp.adapter;
-
+    /*
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -106,3 +106,4 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
 
     }
 }
+*/

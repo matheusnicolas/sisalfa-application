@@ -1,4 +1,0 @@
-#Mon Apr 09 20:39:39 BRT 2018
-base.0=C\:\\Users\\Pichau\\Desktop\\git\\sisalfa-application\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\52
-path.0=classes.dex
-renamed.0=classes.dex

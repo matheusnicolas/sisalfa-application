@@ -16,10 +16,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import br.ufpb.dcx.sisalfapp.adapter.ContextListAdapter;
+//import br.ufpb.dcx.sisalfapp.adapter.ContextListAdapter;
 
 public class ContextActivity extends AppCompatActivity {
-
+/*
     private RecyclerView recyclerView;
     private ContextListAdapter contextListAdapter;
     private static final String TAG = "SISALFA_CONTEXTO";
@@ -66,4 +66,6 @@ public class ContextActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AddContextActivity.class);
         startActivity(intent);
     }
+}
+*/
 }

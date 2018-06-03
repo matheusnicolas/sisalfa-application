@@ -1,5 +1,5 @@
 package br.ufpb.dcx.sisalfapp.adapter;
-
+    /*
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -25,6 +25,7 @@ import br.ufpb.dcx.sisalfapp.model.Challenge;
 
 public class ChallengeListAdapter extends RecyclerView.Adapter<ChallengeListAdapter.ViewHolder>{
 
+
     private String directory;
     private List<Challenge> dataset;
     private Context context;
@@ -42,6 +43,7 @@ public class ChallengeListAdapter extends RecyclerView.Adapter<ChallengeListAdap
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+
         final Challenge challenge = dataset.get(position);
         holder.palavraTextView.setText(challenge.getPalavra_desafio());
         //Decodificar a imagem! (O método decodeImageFromBase64ToBitmap converte a imagem de Base64 pra Bitmap)
@@ -103,5 +105,6 @@ public class ChallengeListAdapter extends RecyclerView.Adapter<ChallengeListAdap
         }
 
 
-    }
+
 }
+ }*/

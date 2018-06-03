@@ -3,15 +3,17 @@ package br.ufpb.dcx.sisalfapp.model;
 public class Challenge {
 
     private long id;
-    private String palavra_desafio;
-    private String audio;
-    private String imagem;
-    private String id_usuario;
+    private String word;
+    private String image;
+    private String sound;
+    private String video;
 
-    public Challenge(String palavra_desafio, String imagem, String audio, String id_usuario){
-        this.palavra_desafio = palavra_desafio;
-        this.imagem = imagem;
-        this.id_usuario = id_usuario;
+    public Challenge(long id, String word, String image, String sound, String video) {
+        this.id = id;
+        this.word = word;
+        this.image = image;
+        this.sound = sound;
+        this.video = video;
     }
 
     public Challenge(){
@@ -26,35 +28,35 @@ public class Challenge {
         this.id = id;
     }
 
-    public String getPalavra_desafio() {
-        return palavra_desafio;
+    public String getWord() {
+        return word;
     }
 
-    public void setPalavra_desafio(String palavra_desafio) {
-        this.palavra_desafio = palavra_desafio;
+    public void setWord(String word) {
+        this.word = word;
     }
 
-    public String getAudio() {
-        return audio;
+    public String getImage() {
+        return image;
     }
 
-    public void setAudio(String audio) {
-        this.audio = audio;
+    public void setImage(String image) {
+        this.image = image;
     }
 
-    public String getImagem() {
-        return imagem;
+    public String getSound() {
+        return sound;
     }
 
-    public void setImagem(String imagem) {
-        this.imagem = imagem;
+    public void setSound(String sound) {
+        this.sound = sound;
     }
 
-    public String getId_usuario() {
-        return id_usuario;
+    public String getVideo() {
+        return video;
     }
 
-    public void setId_usuario(String id_usuario) {
-        this.id_usuario = id_usuario;
+    public void setVideo(String video) {
+        this.video = video;
     }
 }

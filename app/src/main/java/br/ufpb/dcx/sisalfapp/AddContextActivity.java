@@ -1,5 +1,5 @@
 package br.ufpb.dcx.sisalfapp;
-
+    /*
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -43,7 +43,8 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
     private TextView mLabelgravacao;
     private ImageView mImagemContexto;
     private static final String LOG_TAG = "Record_log";
-    private String encodeImage, userEmail, encodeAudio;
+    private String encodeImage;
+    private long userEmail;
     private Boolean successRequest;
     private int SELECT_PICTURE = 1;
     private Recorder recorder = new Recorder();
@@ -55,7 +56,7 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_contexto);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        this.userEmail = user.getEmail();
+        this.userEmail = Integer.parseInt(user.getUid());
 
         mNome = (EditText)findViewById(R.id.nome);
 
@@ -155,11 +156,11 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
     public void sendContext(){
         String contextName = mNome.getText().toString();
         ContextM c = new ContextM();
-        c.setPalavra_contexto(contextName);
-        c.setAudio(encoderDecoderClass.getEncodedAudio());
-        Log.i("AUDIO", c.getAudio());
-        c.setImagem(encodeImage);
-        c.setId_usuario(userEmail);
+        c.setName(contextName);
+        c.setSound(encoderDecoderClass.getEncodedAudio());
+
+        c.setImage(encodeImage);
+        c.setId(userEmail);
         SisalfaService service = serviceGenerator.loadApiCt(this);
         Call<Boolean> request = service.addContext(c);
         request.enqueue(new Callback<Boolean>() {
@@ -181,3 +182,4 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
 
 
 }
+    */

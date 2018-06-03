@@ -1,5 +1,5 @@
 package br.ufpb.dcx.sisalfapp;
-
+    /*
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -30,6 +30,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 import br.ufpb.dcx.sisalfapp.model.Challenge;
+import br.ufpb.dcx.sisalfapp.model.User;
 import br.ufpb.dcx.sisalfapp.sisalfapi.SisalfaService;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -43,26 +44,28 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
     private ImageView imgGaleria;
     private int SELECT_PICTURE = 1;
     private boolean successRequest;
-    private String encodeImage, userEmail;
+    private String encodeImage;
+    private long userEmail;
     private Recorder recorder = new Recorder();
     private EncoderDecoderClass encoderDecoderClass = new EncoderDecoderClass();
     private ServiceGenerator serviceGenerator = new ServiceGenerator();
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_desafio);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        this.userEmail = user.getEmail();
-        ePalavra = (EditText)findViewById(R.id.palavra);
+        this.userEmail = Long.parseLong(user.getUid());
+        ePalavra = findViewById(R.id.palavra);
 
-        mGravarBtn = (Button)findViewById(R.id.btn_gravar);
-        mCadastroBtn = (Button)findViewById(R.id.btn_enviar);
-        mGaleriaBtn = (Button)findViewById(R.id.btn_galeria);
-        mPlayBtn = (Button)findViewById(R.id.btn_reproduzir);
-        textViewGravar = (TextView) findViewById(R.id.audio_recorder);
+        mGravarBtn = findViewById(R.id.btn_gravar);
+        mCadastroBtn = findViewById(R.id.btn_enviar);
+        mGaleriaBtn = findViewById(R.id.btn_galeria);
+        mPlayBtn = findViewById(R.id.btn_reproduzir);
+        textViewGravar = findViewById(R.id.audio_recorder);
 
-        imgGaleria = (ImageView)findViewById(R.id.img_galeria);
+        imgGaleria = findViewById(R.id.img_galeria);
         mCadastroBtn.setOnClickListener(this);
         mGaleriaBtn.setOnClickListener(this);
         mPlayBtn.setOnClickListener(this);
@@ -150,10 +153,10 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
     public void sendChallenge(){
         String palavra = ePalavra.getText().toString();
         Challenge d = new Challenge();
-        d.setPalavra_desafio(palavra);
-        d.setAudio(encoderDecoderClass.getEncodedAudio());
-        d.setImagem(encodeImage);
-        d.setId_usuario(userEmail);
+        d.setWord(palavra);
+        d.setSound(encoderDecoderClass.getEncodedAudio());
+        d.setImage(encodeImage);
+        d.setId(userEmail);
         SisalfaService service = serviceGenerator.loadApiCt(this);
         Call<Challenge> request = service.addChallenge(d);
         request.enqueue(new Callback<Challenge>() {
@@ -179,3 +182,4 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
 
 
 }
+*/

@@ -12,11 +12,10 @@
 
 
     <ImageView
-        android:layout_width="210dp"
-        android:layout_height="240dp"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
         android:background="@drawable/lamp_sisalfa"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="110dp"/>
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,23 +23,93 @@
         android:text="Bem vindo ao Sisalfa!"
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="180dp"
         android:textSize="25dp"/>
+    <!--
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Faça Login via Facebook!"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="225dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ou se preferir:"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="285dp"/>
 
     <com.facebook.login.widget.LoginButton
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/login_button"
-        android:layout_marginTop="410dp"
-        ></com.facebook.login.widget.LoginButton>
+        android:layout_marginTop="250dp"
+        ></com.facebook.login.widget.LoginButton>-->
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="220dp"
+        android:hint="Username"
+        android:id="@+id/username"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:hint="Senha"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/cardview_dark_background">
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Senha" />
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="310dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="290dp"
+        android:background="@drawable/auth"
+        android:onClick="login"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Não possui uma conta?"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"/>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/baseline_input_black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="370dp"
+        android:onClick="redirectRegistrationScreen"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pressione o botão acima!"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="420dp"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="460dp"
         android:layout_centerHorizontal="true"
         android:visibility="gone"
         android:indeterminate="true"/>
