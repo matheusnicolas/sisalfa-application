@@ -25,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     private ServiceGenerator serviceGenerator = new ServiceGenerator();
     private String token;
     private SharedPreferences sharedPreferences;
+    private UserRegistration userRegistration = new UserRegistration();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,15 +108,15 @@ public class LoginActivity extends AppCompatActivity {
 
     private void saveSession(String username, String password, String token) {
         SharedPreferences.Editor s = sharedPreferences.edit();
+        String authorId = Long.toString(userRegistration.getUser(username, this));
         s.putString("username", username);
         s.putString("password", password);
         s.putString("token", token);
+        s.putString("authorId", authorId);
         s.commit();
     }
 
-    public void progressDialog(){
 
-    }
 }
 
 

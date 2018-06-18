@@ -1,5 +1,5 @@
 package br.ufpb.dcx.sisalfapp.adapter;
-    /*
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -45,14 +45,14 @@ public class ChallengeListAdapter extends RecyclerView.Adapter<ChallengeListAdap
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         final Challenge challenge = dataset.get(position);
-        holder.palavraTextView.setText(challenge.getPalavra_desafio());
+        holder.palavraTextView.setText(challenge.getWord());
         //Decodificar a imagem! (O método decodeImageFromBase64ToBitmap converte a imagem de Base64 pra Bitmap)
-        byte[] decodedImage = Base64.decode(challenge.getImagem(), Base64.DEFAULT);
+        byte[] decodedImage = Base64.decode(challenge.getImage(), Base64.DEFAULT);
         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedImage, 0, decodedImage.length);
         holder.fotoImageView.setImageBitmap(decodedByte);
         directory = Environment.getExternalStorageDirectory().getAbsolutePath();
-        directory += "/" + challenge.getPalavra_desafio() + ".3gp";
-        byte[] data = Base64.decode(challenge.getAudio(), Base64.DEFAULT);
+        directory += "/" + challenge.getWord() + ".3gp";
+        byte[] data = Base64.decode(challenge.getSound(), Base64.DEFAULT);
         try{
             File file = new File(directory);
             FileOutputStream os = new FileOutputStream(file, true);
@@ -69,7 +69,7 @@ public class ChallengeListAdapter extends RecyclerView.Adapter<ChallengeListAdap
                 String caminho =  directory = Environment.getExternalStorageDirectory().getAbsolutePath();
                 MediaPlayer mediaPlayer = new MediaPlayer();
                 try{
-                    mediaPlayer.setDataSource(caminho + "/" + challenge.getPalavra_desafio() + ".3gp");
+                    mediaPlayer.setDataSource(caminho + "/" + challenge.getWord() + ".3gp");
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 }catch(Exception e){
@@ -106,5 +106,5 @@ public class ChallengeListAdapter extends RecyclerView.Adapter<ChallengeListAdap
 
 
 
-}
- }*/
+    }
+ }

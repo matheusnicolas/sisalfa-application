@@ -10,15 +10,16 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import br.ufpb.dcx.sisalfapp.adapter.ChallengeListAdapter;
 import br.ufpb.dcx.sisalfapp.model.Challenge;
 import br.ufpb.dcx.sisalfapp.sisalfapi.SisalfaService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-//import br.ufpb.dcx.sisalfapp.adapter.ChallengeListAdapter;
+
 
 public class ChallengeActivity extends AppCompatActivity {
-/*
+
     private RecyclerView recyclerView;
     private ChallengeListAdapter challengeListAdapter;
     private static final String TAG = "SISALFA_DESAFIO";
@@ -28,17 +29,16 @@ public class ChallengeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_desafio);
-        ServiceGenerator serviceGenerator = new ServiceGenerator();
         recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         challengeListAdapter = new ChallengeListAdapter(this);
         recyclerView.setAdapter(challengeListAdapter);
         recyclerView.setHasFixedSize(true);
         final GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         recyclerView.setLayoutManager(layoutManager);
-        getChallengeData();
+        getChallenges();
     }
 
-    public void getChallengeData(){
+    public void getChallenges(){
         SisalfaService service = serviceGenerator.loadApiCt(this);
         Call<List<Challenge>> request = service.getAllChallenges();
         request.enqueue(new Callback<List<Challenge>>() {
@@ -58,10 +58,7 @@ public class ChallengeActivity extends AppCompatActivity {
     }
 
     public void redirectAddChallengeScreen(View view) {
-        Intent intent = new Intent(this, AddChallengeActivity.class);
-        startActivity(intent);
+        startActivity(new Intent(this, AddChallengeActivity.class));
 
     }
-}
-*/
 }

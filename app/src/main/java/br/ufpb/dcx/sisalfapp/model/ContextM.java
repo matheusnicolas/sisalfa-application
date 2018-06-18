@@ -7,25 +7,19 @@ public class ContextM {
     private String image;
     private String sound;
     private String video;
+    private long authorId;
 
-    public ContextM(Long id, String name, String image, String sound, String video) {
+    public ContextM(long id, String name, String image, String sound, String video, long authorId) {
         this.id = id;
         this.name = name;
         this.image = image;
         this.sound = sound;
         this.video = video;
+        this.authorId = authorId;
     }
 
     public ContextM(){
 
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -58,5 +52,17 @@ public class ContextM {
 
     public void setVideo(String video) {
         this.video = video;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(long authorId) {
+        this.authorId = authorId;
     }
 }

@@ -1,5 +1,5 @@
 package br.ufpb.dcx.sisalfapp;
-    /*
+
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -8,8 +8,6 @@ import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Environment;
-import android.os.Handler;
-import android.os.Looper;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,7 +34,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class AddChallengeActivity extends AppCompatActivity implements View.OnClickListener{
+public class AddChallengeActivity extends AppCompatActivity implements View.OnClickListener {
+
 
     private EditText ePalavra;
     private Button mCadastroBtn, mGaleriaBtn, mGravarBtn, mPlayBtn;
@@ -179,7 +178,4 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
             }
         });
     }
-
-
 }
-*/

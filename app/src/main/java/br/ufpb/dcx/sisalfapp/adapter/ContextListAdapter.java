@@ -1,5 +1,5 @@
 package br.ufpb.dcx.sisalfapp.adapter;
-    /*
+
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -44,13 +44,13 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final ContextM contextM = dataset.get(position);
-        holder.contextoTextView.setText(contextM.getPalavra_contexto());
-        byte[] decodedImage = Base64.decode(contextM.getImagem(), Base64.DEFAULT);
+        holder.contextoTextView.setText(contextM.getName());
+        byte[] decodedImage = Base64.decode(contextM.getImage(), Base64.DEFAULT);
         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedImage, 0, decodedImage.length);
         holder.fotoImageView.setImageBitmap(decodedByte);
         directory = Environment.getExternalStorageDirectory().getAbsolutePath();
-        directory += "/" + contextM.getPalavra_contexto() + ".3gp";
-        byte[] data = Base64.decode(contextM.getAudio(), Base64.DEFAULT);
+        directory += "/" + contextM.getName() + ".3gp";
+        byte[] data = Base64.decode(contextM.getSound(), Base64.DEFAULT);
         try{
             File file = new File(directory);
             FileOutputStream os = new FileOutputStream(file, true);
@@ -67,7 +67,7 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
                 String caminho =  directory = Environment.getExternalStorageDirectory().getAbsolutePath();
                 MediaPlayer mediaPlayer = new MediaPlayer();
                 try{
-                    mediaPlayer.setDataSource(caminho + "/" + contextM.getPalavra_contexto() + ".3gp");
+                    mediaPlayer.setDataSource(caminho + "/" + contextM.getName() + ".3gp");
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 }catch(Exception e){
@@ -106,4 +106,3 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
 
     }
 }
-*/

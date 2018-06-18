@@ -1,11 +1,17 @@
 package br.ufpb.dcx.sisalfapp.sisalfapi;
 
+import java.util.List;
+
+import br.ufpb.dcx.sisalfapp.model.Challenge;
+import br.ufpb.dcx.sisalfapp.model.ContextM;
 import br.ufpb.dcx.sisalfapp.model.Login;
 import br.ufpb.dcx.sisalfapp.model.Token;
 import br.ufpb.dcx.sisalfapp.model.User;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 /**
  * Created by Pichau on 04/01/2018.
@@ -18,7 +24,26 @@ public interface SisalfaService {
 
     @POST("users/")
     Call<User> addUser(@Body User user);
+
+
+    @GET("contexts/")
+    Call<List<ContextM>> getAllContexts();
+
+    @POST("contexts/")
+    Call<ContextM> addContext(@Body ContextM contextM);
+
+    @GET("challenges/")
+    Call<List<Challenge>> getAllChallenges();
+
+    @POST
+    Call<Challenge> addChallenge(@Body Challenge challenge);
+
+    @GET("users/{username}/")
+    Call<User> getUser(@Path("username") String username);
     /*
+
+    @GET("getChallengeFromContext/{id}")
+    Call<Challenge> getChallengeFromContext(@Path("id") long id);
 
     @POST("addContext")
     Call<Boolean> addContext(@Body ContextM contextM);

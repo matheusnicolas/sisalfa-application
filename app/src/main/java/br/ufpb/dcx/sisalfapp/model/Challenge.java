@@ -7,13 +7,15 @@ public class Challenge {
     private String image;
     private String sound;
     private String video;
+    private long authorId;
 
-    public Challenge(long id, String word, String image, String sound, String video) {
+    public Challenge(long id, String word, String image, String sound, String video, long authorId) {
         this.id = id;
         this.word = word;
         this.image = image;
         this.sound = sound;
         this.video = video;
+        this.authorId = authorId;
     }
 
     public Challenge(){
@@ -58,5 +60,13 @@ public class Challenge {
 
     public void setVideo(String video) {
         this.video = video;
+    }
+
+    public long getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(long authorId) {
+        this.authorId = authorId;
     }
 }

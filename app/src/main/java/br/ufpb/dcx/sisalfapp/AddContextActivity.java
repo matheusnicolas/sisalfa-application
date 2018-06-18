@@ -1,5 +1,5 @@
 package br.ufpb.dcx.sisalfapp;
-    /*
+
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -8,13 +8,10 @@ import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Environment;
-import android.os.Handler;
-import android.os.Looper;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -58,17 +55,17 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         this.userEmail = Integer.parseInt(user.getUid());
 
-        mNome = (EditText)findViewById(R.id.nome);
+        mNome = findViewById(R.id.nome);
 
-        mGaleriaBtn = (Button)findViewById(R.id.btn_galeria);
-        mGravacaoBtn = (Button)findViewById(R.id.btn_gravar);
-        mEnviarBtn = (Button)findViewById(R.id.btn_enviar);
-        mPlayBtn = (Button)findViewById(R.id.btn_reproduzir);
+        mGaleriaBtn = findViewById(R.id.btn_galeria);
+        mGravacaoBtn = findViewById(R.id.btn_gravar);
+        mEnviarBtn = findViewById(R.id.btn_enviar);
+        mPlayBtn = findViewById(R.id.btn_reproduzir);
         mGaleriaBtn.setOnClickListener(this);
         mEnviarBtn.setOnClickListener(this);
         mPlayBtn.setOnClickListener(this);
-        mLabelgravacao = (TextView)findViewById(R.id.label_recorder);
-        mImagemContexto = (ImageView)findViewById(R.id.img_galeria);
+        mLabelgravacao = findViewById(R.id.label_recorder);
+        mImagemContexto = findViewById(R.id.img_galeria);
 
         successRequest = true;
 
@@ -98,7 +95,7 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.btn_enviar:
-                sendContext();
+                addContext();
                 break;
             case R.id.btn_galeria:
                 Intent intent = new Intent();
@@ -153,26 +150,25 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
         return s;
     }
 
-    public void sendContext(){
+    public void addContext(){
         String contextName = mNome.getText().toString();
         ContextM c = new ContextM();
         c.setName(contextName);
         c.setSound(encoderDecoderClass.getEncodedAudio());
-
         c.setImage(encodeImage);
         c.setId(userEmail);
         SisalfaService service = serviceGenerator.loadApiCt(this);
-        Call<Boolean> request = service.addContext(c);
-        request.enqueue(new Callback<Boolean>() {
+        Call<ContextM> request = service.addContext(c);
+        request.enqueue(new Callback<ContextM>() {
             @Override
-            public void onResponse(Call<Boolean> call, Response<Boolean> response) {
+            public void onResponse(Call<ContextM> call, Response<ContextM> response) {
                 Toast.makeText(getApplicationContext(), "Cadastrado com Sucesso!",  Toast.LENGTH_LONG).show();
                 mNome.setText("");
                 mImagemContexto.setImageBitmap(null);
             }
 
             @Override
-            public void onFailure(Call<Boolean> call, Throwable t) {
+            public void onFailure(Call<ContextM> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), "Erro: " + t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
@@ -182,4 +178,3 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
 
 
 }
-    */

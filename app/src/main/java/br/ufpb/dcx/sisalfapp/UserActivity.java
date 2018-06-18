@@ -19,9 +19,9 @@ public class UserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
-        tName = (TextView)findViewById(R.id.user_name);
-        tEmail = (TextView)findViewById(R.id.user_email);
-        tUID = (TextView)findViewById(R.id.user_uid);
+        tName = findViewById(R.id.user_name);
+        tEmail = findViewById(R.id.user_email);
+        tUID = findViewById(R.id.user_uid);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String name = user.getDisplayName();
