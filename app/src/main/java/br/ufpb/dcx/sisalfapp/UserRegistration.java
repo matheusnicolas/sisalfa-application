@@ -1,6 +1,7 @@
 package br.ufpb.dcx.sisalfapp;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -8,6 +9,7 @@ import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 
 import br.ufpb.dcx.sisalfapp.ServiceGenerator;
+import br.ufpb.dcx.sisalfapp.model.Token;
 import br.ufpb.dcx.sisalfapp.model.User;
 import br.ufpb.dcx.sisalfapp.sisalfapi.SisalfaService;
 import retrofit2.Call;
@@ -22,6 +24,7 @@ public class UserRegistration {
 
     private ServiceGenerator serviceGenerator = new ServiceGenerator();
     private long authorId;
+    private SharedPreferences sharedPreferences;
 
     public void sendUser(String username, String password, String email, String firstName, String lastName, final Context context){
         User user = new User();
@@ -42,7 +45,7 @@ public class UserRegistration {
 
                     }
                 }else{
-                    Toast.makeText(context.getApplicationContext(), "Já existe um usuário com esse email ou houve um erro no sistema, desculpa!: " + response.code(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(context.getApplicationContext(), "Já existe um usuário com esse email ou houve um erro no sistema, desculpa!: " + response.code() + " Response: " + response.message(), Toast.LENGTH_LONG).show();
                     Log.i("ENTROU1", "1");
                 }
             }
@@ -79,6 +82,32 @@ public class UserRegistration {
 
 
         return authorId;
+    }
+
+    public void getUserInformation(final Context context, final String token, final String username, final String password){
+        SisalfaService service = serviceGenerator.loadApiCt(context);
+        Call<User> request = service.getUserInformation(token);
+        request.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                if(response.isSuccessful()){
+                    SharedPreferences.Editor s = sharedPreferences.edit();
+                    s.putString("username", username);
+                    s.putString("password", password);
+                    s.putString("token", token);
+                    s.putString("firstName", response.body().getFirstName());
+                    s.putString("lastName", response.body().getLastName());
+                    s.putString("email", response.body().getEmail());
+                    s.commit();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+                Toast.makeText(context.getApplicationContext(), "Erro: " + t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+
+        });
     }
 
 

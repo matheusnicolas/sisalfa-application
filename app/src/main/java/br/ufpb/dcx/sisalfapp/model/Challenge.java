@@ -7,15 +7,15 @@ public class Challenge {
     private String image;
     private String sound;
     private String video;
-    private long authorId;
+    private long author;
 
-    public Challenge(long id, String word, String image, String sound, String video, long authorId) {
+    public Challenge(long id, String word, String image, String sound, String video, long author) {
         this.id = id;
         this.word = word;
         this.image = image;
         this.sound = sound;
         this.video = video;
-        this.authorId = authorId;
+        this.author = author;
     }
 
     public Challenge(){
@@ -62,11 +62,11 @@ public class Challenge {
         this.video = video;
     }
 
-    public long getAuthorId() {
-        return authorId;
+    public long getAuthor() {
+        return author;
     }
 
-    public void setAuthorId(long authorId) {
-        this.authorId = authorId;
+    public void setAuthor(long author) {
+        this.author = author;
     }
 }

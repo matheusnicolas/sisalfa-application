@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -123,21 +124,21 @@ public class RegisterOptionActivity extends AppCompatActivity {
 
     public void authServiceWithoutFacebook(View view) {
         boolean pass = true;
-        String name = etName.getText().toString();
-        String lastname = etLastname.getText().toString();
+        String firstName = etName.getText().toString();
+        String lastName = etLastname.getText().toString();
         String email = etEmail.getText().toString();
         String username = etUsername.getText().toString();
         String password = etPassword.getText().toString();
         View focus = null;
 
-        if(TextUtils.isEmpty(name)){
+        if(TextUtils.isEmpty(firstName)){
             etName.setError("Campo Vazio!");
             focus = etName;
             focus.requestFocus();
             pass = false;
         }
 
-        if(TextUtils.isEmpty(lastname)){
+        if(TextUtils.isEmpty(lastName)){
             etLastname.setError("Campo Vazio!");
             focus = etLastname;
             focus.requestFocus();
@@ -158,13 +159,6 @@ public class RegisterOptionActivity extends AppCompatActivity {
             pass = false;
         }
 
-        if(TextUtils.isEmpty(username)){
-            etUsername.setError("Campo Vazio!");
-            focus = etUsername;
-            focus.requestFocus();
-            pass = false;
-        }
-
         if(TextUtils.isEmpty(password)){
             etPassword.setError("Campo Vazio!");
             focus = etPassword;
@@ -173,7 +167,9 @@ public class RegisterOptionActivity extends AppCompatActivity {
         }
 
         if(pass == true){
-            userRegistration.sendUser(username, password, email, name, lastname, getApplicationContext());
+            userRegistration.sendUser(username, password, email, firstName, lastName, getApplicationContext());
+
+            Log.i("LOGIN", username + " " +  password  + " " + email + " " + lastName);
             startActivity(new Intent(this, LoginActivity.class));
 
         }

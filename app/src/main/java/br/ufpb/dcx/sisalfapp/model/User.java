@@ -1,6 +1,6 @@
 package br.ufpb.dcx.sisalfapp.model;
 
-public class User{
+public class User {
 
     private long id;
     private String username;

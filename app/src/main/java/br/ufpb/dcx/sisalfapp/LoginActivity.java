@@ -107,13 +107,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void saveSession(String username, String password, String token) {
-        SharedPreferences.Editor s = sharedPreferences.edit();
-        String authorId = Long.toString(userRegistration.getUser(username, this));
-        s.putString("username", username);
-        s.putString("password", password);
-        s.putString("token", token);
-        s.putString("authorId", authorId);
-        s.commit();
+
+        //String userToken = userRegistration.getUser(username, password, this);
+        //String author = Long.toString(userRegistration.getUser(username, this));
+        userRegistration.getUserInformation(this, token, username, password);
+
     }
 
 

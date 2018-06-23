@@ -2,12 +2,14 @@ package br.ufpb.dcx.sisalfapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,7 +37,7 @@ import retrofit2.Response;
 
 public class AddContextActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText mNome;
+    private EditText mNome, mVideoLink;
     private Button mGaleriaBtn, mGravacaoBtn, mEnviarBtn, mPlayBtn;
     private TextView mLabelgravacao;
     private ImageView mImagemContexto;
@@ -56,6 +58,7 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
         this.userEmail = Integer.parseInt(user.getUid());
 
         mNome = findViewById(R.id.nome);
+        mVideoLink = findViewById(R.id.video_link);
 
         mGaleriaBtn = findViewById(R.id.btn_galeria);
         mGravacaoBtn = findViewById(R.id.btn_gravar);
@@ -151,12 +154,17 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
     }
 
     public void addContext(){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        long author = Long.parseLong(sharedPreferences.getString("author", "defaultValue"));
         String contextName = mNome.getText().toString();
+        String videoLink = mVideoLink.getText().toString();
         ContextM c = new ContextM();
         c.setName(contextName);
         c.setSound(encoderDecoderClass.getEncodedAudio());
         c.setImage(encodeImage);
         c.setId(userEmail);
+        c.setVideo(videoLink);
+        c.setAuthor(author);
         SisalfaService service = serviceGenerator.loadApiCt(this);
         Call<ContextM> request = service.addContext(c);
         request.enqueue(new Callback<ContextM>() {

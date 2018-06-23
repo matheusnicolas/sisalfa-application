@@ -8,6 +8,7 @@ import android.media.MediaPlayer;
 import android.os.Environment;
 import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +16,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.ufpb.dcx.sisalfapp.EncoderDecoderClass;
 import br.ufpb.dcx.sisalfapp.R;
 import br.ufpb.dcx.sisalfapp.model.ContextM;
 
@@ -29,6 +33,7 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
     private String directory;
     private List<ContextM> dataset;
     private Context context;
+    private EncoderDecoderClass edc = new EncoderDecoderClass();
 
     public ContextListAdapter(Context context){
         this.context = context;
@@ -45,9 +50,13 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
     public void onBindViewHolder(ViewHolder holder, int position) {
         final ContextM contextM = dataset.get(position);
         holder.contextoTextView.setText(contextM.getName());
-        byte[] decodedImage = Base64.decode(contextM.getImage(), Base64.DEFAULT);
-        Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedImage, 0, decodedImage.length);
-        holder.fotoImageView.setImageBitmap(decodedByte);
+        Picasso.get().load(contextM.getImage()).into(holder.image);
+
+        /*
+        Bitmap decoded = edc.getBitmapFromURL(contextM.getImage());
+        Log.i("DEC", decoded.toString());
+        holder.fotoImageView.setImageBitmap(decoded);
+        */
         directory = Environment.getExternalStorageDirectory().getAbsolutePath();
         directory += "/" + contextM.getName() + ".3gp";
         byte[] data = Base64.decode(contextM.getSound(), Base64.DEFAULT);
@@ -90,16 +99,16 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private ImageView fotoImageView;
+        private ImageView image;
         private TextView contextoTextView;
         private Button audioBtnView;
 
         public ViewHolder(View itemView){
             super(itemView);
 
-            fotoImageView = (ImageView)itemView.findViewById(R.id.imageView);
-            contextoTextView = (TextView) itemView.findViewById(R.id.textView);
-            audioBtnView = (Button)itemView.findViewById(R.id.button);
+            image = itemView.findViewById(R.id.imageView);
+            contextoTextView = itemView.findViewById(R.id.textView);
+            audioBtnView = itemView.findViewById(R.id.button);
 
         }
 

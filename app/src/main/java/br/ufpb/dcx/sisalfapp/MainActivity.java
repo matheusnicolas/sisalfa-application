@@ -2,6 +2,7 @@ package br.ufpb.dcx.sisalfapp;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,14 +18,24 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView tvUsername;
     private ServiceGenerator serviceGenerator = new ServiceGenerator();
-
+    private SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tvUsername = findViewById(R.id.user_name);
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        //SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String username = sharedPreferences.getString("firstName", "");
+        if(sharedPreferences.contains("firstName")){
+            tvUsername.setText("Bem vindo, " + username + "!");
+        }
+
+
+
+
+        //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
 
 

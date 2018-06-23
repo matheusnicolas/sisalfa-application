@@ -2,12 +2,14 @@ package br.ufpb.dcx.sisalfapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,26 +39,26 @@ import retrofit2.Response;
 public class AddChallengeActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    private EditText ePalavra;
+    private EditText eWord, eVideoLink;
     private Button mCadastroBtn, mGaleriaBtn, mGravarBtn, mPlayBtn;
     private TextView textViewGravar;
     private ImageView imgGaleria;
     private int SELECT_PICTURE = 1;
     private boolean successRequest;
     private String encodeImage;
-    private long userEmail;
     private Recorder recorder = new Recorder();
     private EncoderDecoderClass encoderDecoderClass = new EncoderDecoderClass();
     private ServiceGenerator serviceGenerator = new ServiceGenerator();
+    private EncoderDecoderClass edc = new EncoderDecoderClass();
     private User user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_desafio);
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        this.userEmail = Long.parseLong(user.getUid());
-        ePalavra = findViewById(R.id.palavra);
+        eWord = findViewById(R.id.palavra);
+        eVideoLink = findViewById(R.id.video_link);
 
         mGravarBtn = findViewById(R.id.btn_gravar);
         mCadastroBtn = findViewById(R.id.btn_enviar);
@@ -150,12 +152,16 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
     }
 
     public void sendChallenge(){
-        String palavra = ePalavra.getText().toString();
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        long author = Long.parseLong(sharedPreferences.getString("author", "defaultValue"));
+        String word = eWord.getText().toString();
+        String videoLink = eVideoLink.getText().toString();
         Challenge d = new Challenge();
-        d.setWord(palavra);
+        d.setWord(word);
+        d.setVideo(videoLink);
         d.setSound(encoderDecoderClass.getEncodedAudio());
         d.setImage(encodeImage);
-        d.setId(userEmail);
+        d.setAuthor(author);
         SisalfaService service = serviceGenerator.loadApiCt(this);
         Call<Challenge> request = service.addChallenge(d);
         request.enqueue(new Callback<Challenge>() {
@@ -163,7 +169,7 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
             public void onResponse(Call<Challenge> call, Response<Challenge> response) {
                 if(response.isSuccessful()){
                     if (response.body() != null) {
-                        ePalavra.setText("");
+                        eWord.setText("");
                         imgGaleria.setImageBitmap(null);
                         Toast.makeText(getApplicationContext(), "Cadastrado com Sucesso!",  Toast.LENGTH_LONG).show();
                     }

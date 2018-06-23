@@ -22,9 +22,11 @@ public interface SisalfaService {
     @POST("users/login")
     Call<Token> authenticate(@Body Login login);
 
+    @POST("users/login")
+    Call<User> getUserInformation(@Body String token);
+
     @POST("users/")
     Call<User> addUser(@Body User user);
-
 
     @GET("contexts/")
     Call<List<ContextM>> getAllContexts();
@@ -35,7 +37,7 @@ public interface SisalfaService {
     @GET("challenges/")
     Call<List<Challenge>> getAllChallenges();
 
-    @POST
+    @POST("challenges/")
     Call<Challenge> addChallenge(@Body Challenge challenge);
 
     @GET("users/{username}/")
