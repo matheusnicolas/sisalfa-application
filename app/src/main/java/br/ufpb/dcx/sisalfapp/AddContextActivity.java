@@ -49,13 +49,14 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
     private Recorder recorder = new Recorder();
     private EncoderDecoderClass encoderDecoderClass = new EncoderDecoderClass();
     private ServiceGenerator serviceGenerator = new ServiceGenerator();
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_contexto);
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        this.userEmail = Integer.parseInt(user.getUid());
+        //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        //this.userEmail = Integer.parseInt(user.getUid());
 
         mNome = findViewById(R.id.nome);
         mVideoLink = findViewById(R.id.video_link);
@@ -154,25 +155,28 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
     }
 
     public void addContext(){
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        long author = Long.parseLong(sharedPreferences.getString("author", "defaultValue"));
+        sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+        long author = Long.parseLong(sharedPreferences.getString("author", ""));
+        String token = sharedPreferences.getString("token", "");
         String contextName = mNome.getText().toString();
         String videoLink = mVideoLink.getText().toString();
         ContextM c = new ContextM();
         c.setName(contextName);
-        c.setSound(encoderDecoderClass.getEncodedAudio());
+        System.out.println("TESTE DECODIFICAÇÃO: " + encoderDecoderClass.getEncodedAudio());
+        //c.setSound(encoderDecoderClass.getEncodedAudio());
         c.setImage(encodeImage);
         c.setId(userEmail);
         c.setVideo(videoLink);
         c.setAuthor(author);
         SisalfaService service = serviceGenerator.loadApiCt(this);
-        Call<ContextM> request = service.addContext(c);
+        Call<ContextM> request = service.addContext(token, c);
         request.enqueue(new Callback<ContextM>() {
             @Override
             public void onResponse(Call<ContextM> call, Response<ContextM> response) {
                 Toast.makeText(getApplicationContext(), "Cadastrado com Sucesso!",  Toast.LENGTH_LONG).show();
                 mNome.setText("");
                 mImagemContexto.setImageBitmap(null);
+                mVideoLink.setText("");
             }
 
             @Override

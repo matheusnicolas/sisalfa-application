@@ -1,11 +1,11 @@
 package br.ufpb.dcx.sisalfapp;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import br.ufpb.dcx.sisalfapp.model.Login;
 import br.ufpb.dcx.sisalfapp.model.Token;
+import br.ufpb.dcx.sisalfapp.model.User;
 import br.ufpb.dcx.sisalfapp.sisalfapi.SisalfaService;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private ServiceGenerator serviceGenerator = new ServiceGenerator();
     private String token;
     private SharedPreferences sharedPreferences;
-    private UserRegistration userRegistration = new UserRegistration();
+    //private UserRegistration userRegistration = new UserRegistration();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(response.isSuccessful()){
                     token = response.body().getToken();
                     successful(username, password, token);
+                    Log.i("TOKEN", token);
                 }else{
                     Toast.makeText(getApplicationContext(), "Login incorreto!", Toast.LENGTH_SHORT).show();
                 }
@@ -101,16 +103,24 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void successful(String username, String password, String token){
-        saveSession(username, password, token);
+        storeUserLoginOnSharedPreferences(username, password, token);
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 
-    private void saveSession(String username, String password, String token) {
+    private void storeUserLoginOnSharedPreferences(String username, String password, String token) {
+        SharedPreferences.Editor s = sharedPreferences.edit();
+        s.putString("username", username);
+        s.putString("password", password);
+        s.putString("token", token);
+        /*
+        s.putString("author", author);
+        s.putString("firstName", firstName);
+        s.putString("lastName", lastName);
+        s.putString("email", email);
+        */
+        s.commit();
 
-        //String userToken = userRegistration.getUser(username, password, this);
-        //String author = Long.toString(userRegistration.getUser(username, this));
-        userRegistration.getUserInformation(this, token, username, password);
 
     }
 

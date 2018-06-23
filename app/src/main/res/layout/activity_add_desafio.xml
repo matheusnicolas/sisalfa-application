@@ -12,12 +12,12 @@
         android:layout_height="wrap_content"
         android:text="Adicionar um novo Desafio"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="30dp"/>
 
     <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:layout_gravity="center"
         android:hint="Palavra"
         android:gravity="center"
@@ -30,6 +30,15 @@
         android:gravity="center"
         android:hint="Link do Vídeo"
         android:id="@+id/video_link"/>
+    
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:background="@android:drawable/btn_default"
+        android:id="@+id/spinner"
+        android:layout_gravity="center">
+    </Spinner>
 
     <Button
         android:layout_width="wrap_content"
@@ -38,6 +47,8 @@
         android:text="galeria"
         android:layout_gravity="center_horizontal"
         android:id="@+id/btn_galeria"/>
+
+    
 
     <Button
         android:layout_width="300dp"

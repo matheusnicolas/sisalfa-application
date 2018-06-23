@@ -10,6 +10,7 @@ import br.ufpb.dcx.sisalfapp.model.User;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
@@ -22,25 +23,25 @@ public interface SisalfaService {
     @POST("users/login")
     Call<Token> authenticate(@Body Login login);
 
-    @POST("users/login")
-    Call<User> getUserInformation(@Body String token);
+    @GET("users/profile")
+    Call<User> getUserInformation(@Header("x-access-token") String token);
 
-    @POST("users/")
+    @POST("users")
     Call<User> addUser(@Body User user);
 
-    @GET("contexts/")
+    @GET("contexts")
     Call<List<ContextM>> getAllContexts();
 
-    @POST("contexts/")
-    Call<ContextM> addContext(@Body ContextM contextM);
+    @POST("contexts")
+    Call<ContextM> addContext(@Header("x-access-token") String token, @Body ContextM contextM);
 
-    @GET("challenges/")
+    @GET("challenges")
     Call<List<Challenge>> getAllChallenges();
 
-    @POST("challenges/")
-    Call<Challenge> addChallenge(@Body Challenge challenge);
+    @POST("challenges")
+    Call<Challenge> addChallenge(@Header("x-access-token") String token, @Body Challenge challenge);
 
-    @GET("users/{username}/")
+    @GET("users/{username}")
     Call<User> getUser(@Path("username") String username);
     /*
 

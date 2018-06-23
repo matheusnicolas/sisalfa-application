@@ -153,7 +153,8 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
 
     public void sendChallenge(){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        long author = Long.parseLong(sharedPreferences.getString("author", "defaultValue"));
+        long author = Long.parseLong(sharedPreferences.getString("author", ""));
+        String token = sharedPreferences.getString("token", "");
         String word = eWord.getText().toString();
         String videoLink = eVideoLink.getText().toString();
         Challenge d = new Challenge();
@@ -163,7 +164,7 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
         d.setImage(encodeImage);
         d.setAuthor(author);
         SisalfaService service = serviceGenerator.loadApiCt(this);
-        Call<Challenge> request = service.addChallenge(d);
+        Call<Challenge> request = service.addChallenge(token, d);
         request.enqueue(new Callback<Challenge>() {
             @Override
             public void onResponse(Call<Challenge> call, Response<Challenge> response) {

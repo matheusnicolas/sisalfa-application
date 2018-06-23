@@ -46,19 +46,15 @@ public class UserRegistration {
                     }
                 }else{
                     Toast.makeText(context.getApplicationContext(), "Já existe um usuário com esse email ou houve um erro no sistema, desculpa!: " + response.code() + " Response: " + response.message(), Toast.LENGTH_LONG).show();
-                    Log.i("ENTROU1", "1");
                 }
             }
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
                 Toast.makeText(context.getApplicationContext(), "Erro: " + t.getMessage(), Toast.LENGTH_LONG).show();
-                Log.i("ENTROU2", "2");
             }
         });
     }
-
-
 
     public long getUser(final String username, final Context context){
         SisalfaService service = serviceGenerator.loadApiCt(context);
@@ -95,10 +91,12 @@ public class UserRegistration {
                     s.putString("username", username);
                     s.putString("password", password);
                     s.putString("token", token);
-                    s.putString("firstName", response.body().getFirstName());
-                    s.putString("lastName", response.body().getLastName());
-                    s.putString("email", response.body().getEmail());
+                    s.putString("author", Long.toString(response.body().getId()));
+                    s.putString("firstName", response.body().getFirstName().toString());
+                    s.putString("lastName", response.body().getLastName().toString());
+                    s.putString("email", response.body().getEmail().toString());
                     s.commit();
+                    Log.i("USERNAME", "username listado: " + username + token + response.body().getFirstName().toString());
                 }
             }
 

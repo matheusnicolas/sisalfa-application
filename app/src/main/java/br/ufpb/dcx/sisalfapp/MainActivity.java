@@ -5,13 +5,21 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import br.ufpb.dcx.sisalfapp.model.User;
+import br.ufpb.dcx.sisalfapp.sisalfapi.SisalfaService;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 //Activity o qual o usuário é redirecionado a partir da tela de authenticate
 public class MainActivity extends AppCompatActivity {
@@ -25,12 +33,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         tvUsername = findViewById(R.id.user_name);
 
-        //SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String username = sharedPreferences.getString("firstName", "");
-        if(sharedPreferences.contains("firstName")){
-            tvUsername.setText("Bem vindo, " + username + "!");
-        }
+        sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+        String username = sharedPreferences.getString("username", "");
+        String token = sharedPreferences.getString("token", "");
+        tvUsername.setText("Bem vindo, " + username + "!");
+        storeUser(token);
+
+        //SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+
+
 
 
 
@@ -41,30 +53,33 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-    public void sendUserToSisalfaApi(){
-        /*
-        User u = new User();
-        u.setId(userEmail);
+    public void storeUser(final String token){
         SisalfaService service = serviceGenerator.loadApiCt(this);
-        Call<User> request = service(u);
+        Call<User> request = service.getUserInformation(token);
+        //System.out.println("store user token: " + token);
+        //Log.i("USERNAME", "Username: " + username + " Token: " + token);
+        final SharedPreferences.Editor s = sharedPreferences.edit();
         request.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-                Toast.makeText(getApplicationContext(), "Usuário logado com sucesso!", Toast.LENGTH_LONG).show();
+                System.out.println("Entrou no storeUser parte 1");
+                if(response.isSuccessful()){
+                    System.out.println("Entrou no storeUser parte 2");
+                    s.putString("author", Long.toString(response.body().getId()));
+                    s.putString("firstName", response.body().getFirstName().toString());
+                    s.putString("lastName", response.body().getLastName().toString());
+                    s.putString("email", response.body().getEmail().toString());
+                    s.commit();
+                    Log.i("USERNAME", "author: " + Long.toString(response.body().getId()) + " First name: " + response.body().getFirstName().toString());
+                }
             }
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), "Erro: " + t.getMessage(), Toast.LENGTH_LONG).show();
-                Log.i("ERRO", t.getMessage());
             }
+
         });
-
-        */
-
-
-
     }
 
     //Método que retorna para tela de authenticate
