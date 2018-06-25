@@ -188,6 +188,8 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
                 if(response.isSuccessful()){
                     if (response.body() != null) {
                         eWord.setText("");
+                        eVideoLink.setText("");
+                        eContextId.setText("");
                         imgGaleria.setImageBitmap(null);
                         Toast.makeText(getApplicationContext(), "Cadastrado com Sucesso!",  Toast.LENGTH_LONG).show();
                     }
