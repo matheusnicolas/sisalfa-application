@@ -204,7 +204,7 @@ MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\User
 	android:roundIcon
 		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:12:9-44
 	android:allowBackup
 		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme

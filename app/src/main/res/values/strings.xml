@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SisalfaProject</string>
+    <string name="app_name">Sisalfa</string>
     <string name="facebook_app_id">505584699826565</string>
     <string name="fb_login_protocol_scheme">fb505584699826565</string>
     <string name="cancel_login">Login cancelado</string>
