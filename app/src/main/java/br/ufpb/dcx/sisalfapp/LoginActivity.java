@@ -2,6 +2,7 @@ package br.ufpb.dcx.sisalfapp;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -13,11 +14,12 @@ import android.widget.Toast;
 
 import br.ufpb.dcx.sisalfapp.model.Login;
 import br.ufpb.dcx.sisalfapp.model.Token;
-import br.ufpb.dcx.sisalfapp.model.User;
 import br.ufpb.dcx.sisalfapp.sisalfapi.SisalfaService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import static android.Manifest.permission.RECORD_AUDIO;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -32,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        requestPermission();
         etUsername = findViewById(R.id.username);
         etPassword = findViewById(R.id.password);
         progressBar = findViewById(R.id.progress_bar);
@@ -122,6 +125,10 @@ public class LoginActivity extends AppCompatActivity {
         s.commit();
 
 
+    }
+
+    private void requestPermission() {
+        ActivityCompat.requestPermissions(this, new String[]{WRITE_EXTERNAL_STORAGE, RECORD_AUDIO}, 1);
     }
 
 
