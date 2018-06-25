@@ -18,6 +18,8 @@ public class ContextM {
         this.author = author;
     }
 
+
+
     public ContextM(){
 
     }
@@ -54,6 +56,10 @@ public class ContextM {
         this.video = video;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public void setId(long id) {
         this.id = id;
     }
@@ -65,4 +71,9 @@ public class ContextM {
     public void setAuthor(long author) {
         this.author = author;
     }
+
+    public String toString(){
+        return Long.toString(this.id);
+    }
+
 }

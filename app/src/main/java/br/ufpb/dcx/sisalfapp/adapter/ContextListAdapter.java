@@ -2,13 +2,10 @@ package br.ufpb.dcx.sisalfapp.adapter;
 
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.os.Environment;
 import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +46,8 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final ContextM contextM = dataset.get(position);
-        holder.contextoTextView.setText(contextM.getName());
+        holder.contextoTextView.setText("Contexto: " + contextM.getName());
+        holder.id_context.setText("ID do Contexto: " + contextM.getId());
         Picasso.get().load(contextM.getImage()).into(holder.image);
 
         /*
@@ -100,15 +98,18 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView image;
-        private TextView contextoTextView;
+        private TextView contextoTextView, id_context;
         private Button audioBtnView;
 
         public ViewHolder(View itemView){
             super(itemView);
 
             image = itemView.findViewById(R.id.imageView);
-            contextoTextView = itemView.findViewById(R.id.textView);
+            contextoTextView = itemView.findViewById(R.id.text_view_description);
             audioBtnView = itemView.findViewById(R.id.button);
+            id_context = itemView.findViewById(R.id.text_view_id);
+
+
 
         }
 

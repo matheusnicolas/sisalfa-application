@@ -86,21 +86,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Não possui uma conta?"
+        android:text="Entrar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="350dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Não possui uma conta?"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"/>
 
     <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/baseline_input_black"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="450dp"
         android:onClick="redirectRegistrationScreen"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pressione o botão acima!"
+        android:text="Pressione o botão abaixo!"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="420dp"/>
 

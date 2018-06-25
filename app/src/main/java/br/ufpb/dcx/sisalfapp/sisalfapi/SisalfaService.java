@@ -3,6 +3,7 @@ package br.ufpb.dcx.sisalfapp.sisalfapi;
 import java.util.List;
 
 import br.ufpb.dcx.sisalfapp.model.Challenge;
+import br.ufpb.dcx.sisalfapp.model.ChallengeToSend;
 import br.ufpb.dcx.sisalfapp.model.ContextM;
 import br.ufpb.dcx.sisalfapp.model.Login;
 import br.ufpb.dcx.sisalfapp.model.Token;
@@ -15,7 +16,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 /**
- * Created by Pichau on 04/01/2018.
+ * Created by matheusnicolas on 04/01/2018.
  */
 
 public interface SisalfaService {
@@ -39,7 +40,7 @@ public interface SisalfaService {
     Call<List<Challenge>> getAllChallenges();
 
     @POST("challenges")
-    Call<Challenge> addChallenge(@Header("x-access-token") String token, @Body Challenge challenge);
+    Call<ChallengeToSend> addChallenge(@Header("x-access-token") String token, @Body ChallengeToSend challenge);
 
     @GET("users/{username}")
     Call<User> getUser(@Path("username") String username);

@@ -1,7 +1,6 @@
 package br.ufpb.dcx.sisalfapp.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.media.MediaPlayer;
 import android.os.Environment;
 import android.support.v7.widget.RecyclerView;
@@ -13,8 +12,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -49,7 +46,9 @@ public class ChallengeListAdapter extends RecyclerView.Adapter<ChallengeListAdap
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         final Challenge challenge = dataset.get(position);
-        holder.palavraTextView.setText(challenge.getWord());
+        holder.palavraTextView.setText("Palavra: " + challenge.getWord());
+        holder.context.setText("Contexto: " + challenge.getContext().getName());
+        holder.id.setText("ID do Contexto: " + Long.toString(challenge.getContext().getId()));
         Picasso.get().load(challenge.getImage()).into(holder.ïmage);
         /*
         Bitmap decoded = edc.getBitmapFromURL("https://app.sisalfa.dcx.ufpb.br/v1/" + challenge.getImage());
@@ -100,15 +99,17 @@ public class ChallengeListAdapter extends RecyclerView.Adapter<ChallengeListAdap
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView ïmage;
-        private TextView palavraTextView;
+        private TextView palavraTextView, id, context;
         private Button audioBtnView;
 
         public ViewHolder(View itemView){
             super(itemView);
 
             ïmage = itemView.findViewById(R.id.imageView);
-            palavraTextView =  itemView.findViewById(R.id.textView);
+            palavraTextView =  itemView.findViewById(R.id.text_view_description);
             audioBtnView = itemView.findViewById(R.id.button);
+            id = itemView.findViewById(R.id.text_view_id);
+            context = itemView.findViewById(R.id.text_view_context);
         }
 
 

@@ -9,7 +9,6 @@ import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Environment;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,17 +18,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import br.ufpb.dcx.sisalfapp.model.Challenge;
+import br.ufpb.dcx.sisalfapp.model.ChallengeToSend;
+import br.ufpb.dcx.sisalfapp.model.ContextM;
 import br.ufpb.dcx.sisalfapp.model.User;
 import br.ufpb.dcx.sisalfapp.sisalfapi.SisalfaService;
 import retrofit2.Call;
@@ -39,18 +42,22 @@ import retrofit2.Response;
 public class AddChallengeActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    private EditText eWord, eVideoLink;
+    private EditText eWord, eVideoLink, eContextId;
     private Button mCadastroBtn, mGaleriaBtn, mGravarBtn, mPlayBtn;
-    private TextView textViewGravar;
+    private TextView textViewGravar, textViewContext;
     private ImageView imgGaleria;
     private int SELECT_PICTURE = 1;
     private boolean successRequest;
     private String encodeImage;
     private Recorder recorder = new Recorder();
     private EncoderDecoderClass encoderDecoderClass = new EncoderDecoderClass();
-    private ServiceGenerator serviceGenerator = new ServiceGenerator();
     private EncoderDecoderClass edc = new EncoderDecoderClass();
     private User user;
+    private Spinner mSpinner;
+    private ServiceGenerator serviceGenerator = new ServiceGenerator();
+    //public List<String> listContext;
+    private SharedPreferences sharedPreferences;
+
 
 
     @Override
@@ -59,19 +66,27 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_add_desafio);
         eWord = findViewById(R.id.palavra);
         eVideoLink = findViewById(R.id.video_link);
+        eContextId = findViewById(R.id.context_id);
+        //listContext = new ArrayList<String>();
+        //popSpinner();
 
         mGravarBtn = findViewById(R.id.btn_gravar);
         mCadastroBtn = findViewById(R.id.btn_enviar);
         mGaleriaBtn = findViewById(R.id.btn_galeria);
         mPlayBtn = findViewById(R.id.btn_reproduzir);
         textViewGravar = findViewById(R.id.audio_recorder);
-
         imgGaleria = findViewById(R.id.img_galeria);
         mCadastroBtn.setOnClickListener(this);
         mGaleriaBtn.setOnClickListener(this);
         mPlayBtn.setOnClickListener(this);
 
         successRequest = true;
+
+
+
+        //spinnerAdapter = new SpinnerAdapter(this, R.layout.spinner_layout, listContext);
+
+
 
         mGravarBtn.setOnTouchListener(new View.OnTouchListener() {
 
@@ -152,22 +167,24 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
     }
 
     public void sendChallenge(){
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
         long author = Long.parseLong(sharedPreferences.getString("author", ""));
         String token = sharedPreferences.getString("token", "");
         String word = eWord.getText().toString();
         String videoLink = eVideoLink.getText().toString();
-        Challenge d = new Challenge();
+        String contextId = eContextId.getText().toString();
+        ChallengeToSend d = new ChallengeToSend();
         d.setWord(word);
         d.setVideo(videoLink);
-        d.setSound(encoderDecoderClass.getEncodedAudio());
+        d.setSound("");//encoderDecoderClass.getEncodedAudio());
         d.setImage(encodeImage);
         d.setAuthor(author);
+        d.setContext(Long.parseLong(contextId));
         SisalfaService service = serviceGenerator.loadApiCt(this);
-        Call<Challenge> request = service.addChallenge(token, d);
-        request.enqueue(new Callback<Challenge>() {
+        Call<ChallengeToSend> request = service.addChallenge(token, d);
+        request.enqueue(new Callback<ChallengeToSend>() {
             @Override
-            public void onResponse(Call<Challenge> call, Response<Challenge> response) {
+            public void onResponse(Call<ChallengeToSend> call, Response<ChallengeToSend> response) {
                 if(response.isSuccessful()){
                     if (response.body() != null) {
                         eWord.setText("");
@@ -180,9 +197,41 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
             }
 
             @Override
-            public void onFailure(Call<Challenge> call, Throwable t) {
+            public void onFailure(Call<ChallengeToSend> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), "Erro: " + t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }
+    /*
+    public void popSpinner(){
+        final ContextM contextM = new ContextM();
+        SisalfaService sisalfaService = serviceGenerator.loadApiCt(this);
+        Call<List<ContextM>> request = sisalfaService.getAllContexts();
+        request.enqueue(new Callback<List<ContextM>>() {
+            @Override
+            public void onResponse(Call<List<ContextM>> call, Response<List<ContextM>> response) {
+                Log.i("LIST", "ENTROU ON RESPONSE");
+                if(response.isSuccessful()){
+                    List<ContextM> lista = response.body();
+                    for(ContextM c: lista){
+                        String conc = "";
+                        Log.i("CNAME", c.getName());
+                        conc += c.getName() + " " + c.getId();
+                        listContext.add(conc);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<ContextM>> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Erro: " + t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+
+        //return spinnerAdapter;
+    }*/
+
+
 }

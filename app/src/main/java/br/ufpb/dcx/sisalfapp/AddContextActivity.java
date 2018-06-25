@@ -163,7 +163,7 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
         ContextM c = new ContextM();
         c.setName(contextName);
         System.out.println("TESTE DECODIFICAÇÃO: " + encoderDecoderClass.getEncodedAudio());
-        //c.setSound(encoderDecoderClass.getEncodedAudio());
+        c.setSound("");//c.setSound(encoderDecoderClass.getEncodedAudio());
         c.setImage(encodeImage);
         c.setId(userEmail);
         c.setVideo(videoLink);

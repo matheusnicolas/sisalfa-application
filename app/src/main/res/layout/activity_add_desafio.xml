@@ -30,20 +30,19 @@
         android:gravity="center"
         android:hint="Link do Vídeo"
         android:id="@+id/video_link"/>
-    
-    <Spinner
-        android:layout_width="200dp"
+
+
+    <EditText
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:spinnerMode="dropdown"
-        android:background="@android:drawable/btn_default"
-        android:id="@+id/spinner"
-        android:layout_gravity="center">
-    </Spinner>
+        android:layout_gravity="center"
+        android:hint="Informe o ID do Contexto"
+        android:gravity="center"
+        android:id="@+id/context_id"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:text="galeria"
         android:layout_gravity="center_horizontal"
         android:id="@+id/btn_galeria"/>

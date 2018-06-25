@@ -1,27 +1,14 @@
 package br.ufpb.dcx.sisalfapp.model;
 
-public class Challenge {
+public class ChallengeToSend {
 
     private long id;
+    private long context;
     private String word;
     private String image;
     private String sound;
     private String video;
     private long author;
-    private ContextM context;
-
-    public Challenge(long id, String word, String image, String sound, String video, long author) {
-        this.id = id;
-        this.word = word;
-        this.image = image;
-        this.sound = sound;
-        this.video = video;
-        this.author = author;
-    }
-
-    public Challenge(){
-
-    }
 
     public long getId() {
         return id;
@@ -29,6 +16,14 @@ public class Challenge {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public long getContext() {
+        return context;
+    }
+
+    public void setContext(long context) {
+        this.context = context;
     }
 
     public String getWord() {
@@ -69,13 +64,5 @@ public class Challenge {
 
     public void setAuthor(long author) {
         this.author = author;
-    }
-
-    public ContextM getContext() {
-        return context;
-    }
-
-    public void setContext(ContextM context) {
-        this.context = context;
     }
 }

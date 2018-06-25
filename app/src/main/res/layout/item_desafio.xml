@@ -11,7 +11,7 @@
         android:layout_gravity="center_horizontal"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_view_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
@@ -19,6 +19,22 @@
         android:textAllCaps="true"
         android:textColor="#FAFAFA"
         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_context"
+        android:gravity="center_horizontal"
+        android:textColor="#FAFAFA"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_id"
+        android:gravity="center_horizontal"
+        android:textColor="#FAFAFA"
+        android:textAllCaps="true"/>
 
     <Button
         android:layout_width="wrap_content"
