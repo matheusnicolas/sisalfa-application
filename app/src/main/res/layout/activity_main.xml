@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bem vindo, fulano de tal!"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
         android:id="@+id/user_name"

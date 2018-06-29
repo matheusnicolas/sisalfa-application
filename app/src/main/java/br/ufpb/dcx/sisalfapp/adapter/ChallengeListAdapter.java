@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -48,7 +49,6 @@ public class ChallengeListAdapter extends RecyclerView.Adapter<ChallengeListAdap
         final Challenge challenge = dataset.get(position);
         holder.palavraTextView.setText("Palavra: " + challenge.getWord());
         holder.context.setText("Contexto: " + challenge.getContext().getName());
-        holder.id.setText("ID do Contexto: " + Long.toString(challenge.getContext().getId()));
         Picasso.get().load(challenge.getImage()).into(holder.ïmage);
         /*
         Bitmap decoded = edc.getBitmapFromURL("https://app.sisalfa.dcx.ufpb.br/v1/" + challenge.getImage());
@@ -100,15 +100,14 @@ public class ChallengeListAdapter extends RecyclerView.Adapter<ChallengeListAdap
 
         private ImageView ïmage;
         private TextView palavraTextView, id, context;
-        private Button audioBtnView;
+        private ImageButton audioBtnView;
 
         public ViewHolder(View itemView){
             super(itemView);
 
             ïmage = itemView.findViewById(R.id.imageView);
             palavraTextView =  itemView.findViewById(R.id.text_view_description);
-            audioBtnView = itemView.findViewById(R.id.button);
-            id = itemView.findViewById(R.id.text_view_id);
+            audioBtnView = itemView.findViewById(R.id.play_button);
             context = itemView.findViewById(R.id.text_view_context);
         }
 

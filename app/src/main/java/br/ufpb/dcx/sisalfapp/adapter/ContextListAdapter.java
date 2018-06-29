@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,7 +31,15 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
     private String directory;
     private List<ContextM> dataset;
     private Context context;
-    private EncoderDecoderClass edc = new EncoderDecoderClass();
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener{
+        void onItemClickListener(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        mListener = listener;
+    }
 
     public ContextListAdapter(Context context){
         this.context = context;
@@ -47,7 +56,7 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
     public void onBindViewHolder(ViewHolder holder, int position) {
         final ContextM contextM = dataset.get(position);
         holder.contextoTextView.setText("Contexto: " + contextM.getName());
-        holder.id_context.setText("ID do Contexto: " + contextM.getId());
+        //holder.id_context.setText("ID do Contexto: " + contextM.getId());
         Picasso.get().load(contextM.getImage()).into(holder.image);
 
         /*
@@ -90,6 +99,10 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
         notifyDataSetChanged();
     }
 
+    public List<ContextM> getAllContexts(){
+        return dataset;
+    }
+
     @Override
     public int getItemCount() {
         return dataset.size();
@@ -99,15 +112,27 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
 
         private ImageView image;
         private TextView contextoTextView, id_context;
-        private Button audioBtnView;
+        private ImageButton audioBtnView;
 
         public ViewHolder(View itemView){
             super(itemView);
 
             image = itemView.findViewById(R.id.imageView);
             contextoTextView = itemView.findViewById(R.id.text_view_description);
-            audioBtnView = itemView.findViewById(R.id.button);
-            id_context = itemView.findViewById(R.id.text_view_id);
+            audioBtnView = itemView.findViewById(R.id.play_button);
+            //id_context = itemView.findViewById(R.id.text_view_id);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(mListener != null){
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION){
+                            mListener.onItemClickListener(position);
+                        }
+                    }
+                }
+            });
 
 
 

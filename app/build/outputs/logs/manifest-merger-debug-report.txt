@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-38:12
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-48:12
 MERGED from [com.google.firebase:firebase-core:12.0.1] C:\Users\Breba\.gradle\caches\transforms-1\files-1.1\firebase-core-12.0.1.aar\afee9e9ee24af1b9f5f1e5fb6d9b8e77\AndroidManifest.xml:2:1-6:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\Breba\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9532cf7acd019adfe21812b662cee271\AndroidManifest.xml:17:1-31:12
 MERGED from [com.facebook.android:facebook-android-sdk:4.28.0] C:\Users\Breba\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.28.0.aar\79d51bc714a6a10a7cc4b9c61a0bbc27\AndroidManifest.xml:21:1-31:12
@@ -54,20 +54,20 @@ MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\Breba\
 MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\Breba\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-12.0.1.aar\aee7fc5fc2f96cc93bdd8e6e397c67b4\AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Breba\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\4ebeb009136920442bb2923b72a5149f\AndroidManifest.xml:17:1-30:12
 MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\Breba\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-12.0.1.aar\12c4620718d10fbd219e3e2fb563a9c8\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-48:12
 	package
 		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-38:12
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-48:12
 		INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-38:12
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:1-48:12
 		INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:2:11-69
@@ -102,7 +102,7 @@ ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\Androi
 	android:name
 		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:8:22-78
 application
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:10:5-36:19
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:10:5-46:19
 MERGED from [com.google.firebase:firebase-core:12.0.1] C:\Users\Breba\.gradle\caches\transforms-1\files-1.1\firebase-core-12.0.1.aar\afee9e9ee24af1b9f5f1e5fb6d9b8e77\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-core:12.0.1] C:\Users\Breba\.gradle\caches\transforms-1\files-1.1\firebase-core-12.0.1.aar\afee9e9ee24af1b9f5f1e5fb6d9b8e77\AndroidManifest.xml:5:5-20
 MERGED from [com.android.support:design:26.1.0] C:\Users\Breba\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\9532cf7acd019adfe21812b662cee271\AndroidManifest.xml:25:5-29:19
@@ -216,51 +216,73 @@ ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\Androi
 	android:name
 		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:18:13-58
 activity#br.ufpb.dcx.sisalfapp.MainActivity
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:21:9-50
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:21:9-22:51
+	android:screenOrientation
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:22:13-49
 	android:name
 		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:21:19-47
 activity#br.ufpb.dcx.sisalfapp.LoginActivity
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:22:9-28:20
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:23:9-30:20
+	android:screenOrientation
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:24:13-49
 	android:name
-		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:22:19-48
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:23:19-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:23:13-27:29
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:26:17-77
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:26:27-74
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:28:27-74
 activity#br.ufpb.dcx.sisalfapp.ContextActivity
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:29:9-53
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:31:9-32:51
+	android:screenOrientation
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:32:13-49
 	android:name
-		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:29:19-50
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:31:19-50
 activity#br.ufpb.dcx.sisalfapp.UserActivity
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:30:9-50
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:33:9-50
 	android:name
-		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:30:19-47
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:33:19-47
 activity#br.ufpb.dcx.sisalfapp.ChallengeActivity
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:31:9-55
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:34:9-35:51
+	android:screenOrientation
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:35:13-49
 	android:name
-		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:31:19-52
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:34:19-52
 activity#br.ufpb.dcx.sisalfapp.AddChallengeActivity
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:32:9-58
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:36:9-37:51
+	android:screenOrientation
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:37:13-49
 	android:name
-		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:32:19-55
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:36:19-55
 activity#br.ufpb.dcx.sisalfapp.AddContextActivity
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:33:9-56
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:38:9-39:51
+	android:screenOrientation
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:39:13-49
 	android:name
-		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:33:19-53
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:38:19-53
 activity#br.ufpb.dcx.sisalfapp.RegisterOptionActivity
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:34:9-60
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:40:9-41:51
+	android:screenOrientation
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:41:13-49
 	android:name
-		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:34:19-57
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:40:19-57
 activity#br.ufpb.dcx.sisalfapp.FacebookRegisterActivity
-ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:35:9-71
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:42:9-43:51
+	android:screenOrientation
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:43:13-49
 	android:name
-		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:35:19-59
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:42:19-59
+activity#br.ufpb.dcx.sisalfapp.ChallengesActivity
+ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:44:9-45:61
+	android:screenOrientation
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:45:13-49
+	android:name
+		ADDED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml:44:19-53
 uses-sdk
 INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Breba\StudioProjects\sisalfa-application\app\src\main\AndroidManifest.xml

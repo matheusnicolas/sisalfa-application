@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import br.ufpb.dcx.sisalfapp.adapter.ContextListAdapter;
@@ -17,12 +18,14 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ContextActivity extends AppCompatActivity {
+public class ContextActivity extends AppCompatActivity implements ContextListAdapter.OnItemClickListener{
 
     private ServiceGenerator serviceGenerator = new ServiceGenerator();
     private RecyclerView recyclerView;
     private ContextListAdapter contextListAdapter;
     private static final String TAG = "SISALFA_CONTEXTO";
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,5 +61,14 @@ public class ContextActivity extends AppCompatActivity {
 
     public void redirectAddContextoScreen(View view) {
         startActivity(new Intent(this, AddContextActivity.class));
+    }
+
+    @Override
+    public void onItemClickListener(int position) {
+        Intent detailIntent = new Intent(this, ChallengesActivity.class);
+        List<ContextM> contextList = contextListAdapter.getAllContexts();
+        ContextM clickedItem = contextList.get(position);
+        detailIntent.putExtra("ID", clickedItem.getId());
+        startActivity(detailIntent);
     }
 }

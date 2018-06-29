@@ -17,8 +17,7 @@
         android:text="@string/app_name"
         android:gravity="center_horizontal"
         android:textAllCaps="true"
-        android:textColor="#FAFAFA"
-        />
+        android:textColor="#FAFAFA"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -28,21 +27,12 @@
         android:textColor="#FAFAFA"
         android:textAllCaps="true"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/text_view_id"
-        android:gravity="center_horizontal"
-        android:textColor="#FAFAFA"
-        android:textAllCaps="true"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/play_circle"
         android:layout_gravity="center"
-        android:text="Play"
-        android:id="@+id/button"/>
-
+        android:id="@+id/play_button"/>
 
 
 </LinearLayout>
