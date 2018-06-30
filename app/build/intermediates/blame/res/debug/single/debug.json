@@ -8,20 +8,20 @@
         "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f4b02d6db41e82065b62d067f9f0c6fb\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_messenger_button_send_round_shadow.png.flat",
-        "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.28.0.aar\\4cce71664dab61ae51357d0b06903a9f\\res\\drawable-mdpi-v4\\messenger_button_send_round_shadow.png"
-    },
-    {
         "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable_play_circle.png.flat",
         "source": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\src\\main\\res\\drawable\\play_circle.png"
     },
     {
-        "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
-        "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f4b02d6db41e82065b62d067f9f0c6fb\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_48dp.png"
+        "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_messenger_button_send_round_shadow.png.flat",
+        "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.28.0.aar\\4cce71664dab61ae51357d0b06903a9f\\res\\drawable-mdpi-v4\\messenger_button_send_round_shadow.png"
     },
     {
         "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_fade_out.xml.flat",
         "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f4b02d6db41e82065b62d067f9f0c6fb\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
+        "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f4b02d6db41e82065b62d067f9f0c6fb\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
         "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -124,12 +124,12 @@
         "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f4b02d6db41e82065b62d067f9f0c6fb\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
-        "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_dialog_material_background.xml.flat",
-        "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f4b02d6db41e82065b62d067f9f0c6fb\\res\\drawable\\abc_dialog_material_background.xml"
-    },
-    {
         "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",
         "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\0dd8e0b8a34da2cf0957b39e71d1f868\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_dialog_material_background.xml.flat",
+        "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f4b02d6db41e82065b62d067f9f0c6fb\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
         "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_button_send_icon_white.png.flat",
@@ -140,12 +140,12 @@
         "source": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\src\\main\\res\\layout\\activity_option_registration.xml"
     },
     {
-        "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_light.xml.flat",
-        "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f4b02d6db41e82065b62d067f9f0c6fb\\res\\color\\abc_primary_text_material_light.xml"
-    },
-    {
         "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\layout_com_facebook_tooltip_bubble.xml.flat",
         "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.28.0.aar\\991b4afc660fdc2260e7888c67894af3\\res\\layout\\com_facebook_tooltip_bubble.xml"
+    },
+    {
+        "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_light.xml.flat",
+        "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f4b02d6db41e82065b62d067f9f0c6fb\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
         "merged": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_activity_chooser_view.xml.flat",

@@ -55,7 +55,7 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final ContextM contextM = dataset.get(position);
-        holder.contextoTextView.setText("Contexto: " + contextM.getName());
+        holder.contextoTextView.setText(contextM.getName());
         //holder.id_context.setText("ID do Contexto: " + contextM.getId());
         Picasso.get().load(contextM.getImage()).into(holder.image);
 
