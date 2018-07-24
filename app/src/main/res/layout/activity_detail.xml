@@ -39,6 +39,7 @@
                 android:background="@drawable/ic_add"
                 android:id="@+id/add_challenge_btn"
                 android:layout_gravity="center"
+                android:onClick="redirectAddChallengeScreen"
                 />
         </LinearLayout>
 

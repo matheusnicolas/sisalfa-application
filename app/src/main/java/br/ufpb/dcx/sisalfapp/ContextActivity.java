@@ -1,6 +1,7 @@
 package br.ufpb.dcx.sisalfapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -24,6 +25,7 @@ public class ContextActivity extends AppCompatActivity implements ContextListAda
     private RecyclerView recyclerView;
     private ContextListAdapter contextListAdapter;
     private static final String TAG = "SISALFA_CONTEXTO";
+    private SharedPreferences sharedPreferences;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,7 @@ public class ContextActivity extends AppCompatActivity implements ContextListAda
         contextListAdapter = new ContextListAdapter(this);
         recyclerView.setAdapter(contextListAdapter);
         recyclerView.setHasFixedSize(true);
+        sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
         contextListAdapter.setOnItemClickListener(ContextActivity.this);
         final GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         recyclerView.setLayoutManager(layoutManager);
@@ -63,10 +66,13 @@ public class ContextActivity extends AppCompatActivity implements ContextListAda
 
     @Override
     public void onItemClickListener(int position) {
+        SharedPreferences.Editor s = sharedPreferences.edit();
         Intent detailIntent = new Intent(this, DetailActivity.class);
         List<ContextM> contextList = contextListAdapter.getAllContexts();
         ContextM clickedItem = contextList.get(position);
         String id = Long.toString(clickedItem.getId());
+        s.putString("idContextoDesafio", id);
+        s.commit();
         detailIntent.putExtra("ID", id);
         startActivity(detailIntent);
     }

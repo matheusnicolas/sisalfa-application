@@ -163,7 +163,7 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
 
         long author = Long.parseLong(sharedPreferences.getString("author", ""));
         String token = sharedPreferences.getString("token", "");
-        long contextId = Long.parseLong(sharedPreferences.getString("contextId",""));
+        long contextId = Long.parseLong(sharedPreferences.getString("idContextoDesafio",""));
         String word = eWord.getText().toString();
         String videoLink = eVideoLink.getText().toString();
         ChallengeToSend d = new ChallengeToSend();

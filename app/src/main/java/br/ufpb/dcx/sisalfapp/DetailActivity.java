@@ -1,6 +1,7 @@
 package br.ufpb.dcx.sisalfapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -24,15 +25,14 @@ public class DetailActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ChallengeListAdapter challengeListAdapter;
-    private ImageButton btnAddChallenge;
     private static final String TAG = "SISALFA_DESAFIO";
     private ServiceGenerator serviceGenerator = new ServiceGenerator();
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        btnAddChallenge = findViewById(R.id.add_challenge_btn);
         Intent intent = getIntent();
         final long challengeId = Long.parseLong(intent.getStringExtra("ID"));
         recyclerView = findViewById(R.id.recyclerview);
@@ -42,19 +42,7 @@ public class DetailActivity extends AppCompatActivity {
         final GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         recyclerView.setLayoutManager(layoutManager);
         getChallenges(challengeId);
-        btnAddChallenge.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                callChallengeActivity(challengeId);
-            }
-        });
-    }
 
-    private void callChallengeActivity(long challengeId) {
-        Intent inChallenge = new Intent(this, AddChallengeActivity.class);
-        String id = Long.toString(challengeId);
-        inChallenge.putExtra("ID", id);
-        startActivity(inChallenge);
     }
 
     public void getChallenges(long challengeId){
@@ -75,6 +63,10 @@ public class DetailActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Erro: " + t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    public void redirectAddChallengeScreen(View view){
+        startActivity(new Intent(this, AddChallengeActivity.class));
     }
 
 

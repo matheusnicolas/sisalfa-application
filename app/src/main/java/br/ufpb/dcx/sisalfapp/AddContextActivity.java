@@ -52,9 +52,6 @@ public class AddContextActivity extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_contexto);
-        //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        //this.userEmail = Integer.parseInt(user.getUid());
-
         mNome = findViewById(R.id.nome);
         mVideoLink = findViewById(R.id.video_link);
 

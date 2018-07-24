@@ -16,24 +16,24 @@
         "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\color\\switch_thumb_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_button_icon_white.png.flat",
-        "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.28.0.aar\\fade871ebc74a67b1c6fb994baec7cfd\\res\\drawable-hdpi-v4\\com_facebook_button_icon_white.png"
-    },
-    {
         "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_com_facebook_button_icon_blue.png.flat",
         "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.28.0.aar\\fade871ebc74a67b1c6fb994baec7cfd\\res\\drawable-xxhdpi-v4\\com_facebook_button_icon_blue.png"
     },
     {
-        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
-        "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-12.0.1.aar\\26bd637a172ab02c4df4859a2950452a\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_button_icon_white.png.flat",
+        "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.28.0.aar\\fade871ebc74a67b1c6fb994baec7cfd\\res\\drawable-hdpi-v4\\com_facebook_button_icon_white.png"
+    },
+    {
+        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_secondary_text_material_dark.xml.flat",
+        "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\color\\abc_secondary_text_material_dark.xml"
     },
     {
         "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
         "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\drawable-xhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_secondary_text_material_dark.xml.flat",
-        "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\color\\abc_secondary_text_material_dark.xml"
+        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
+        "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-12.0.1.aar\\26bd637a172ab02c4df4859a2950452a\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
@@ -48,12 +48,12 @@
         "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\layout\\abc_tooltip.xml"
     },
     {
-        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
-        "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
         "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add.png.flat",
         "source": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\src\\main\\res\\drawable\\ic_add.png"
+    },
+    {
+        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
+        "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -80,24 +80,24 @@
         "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\7a2605bb4d287e615679199888b15d08\\res\\drawable-hdpi-v4\\design_ic_visibility.png"
     },
     {
-        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_sisalfa_icon.png.flat",
-        "source": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\src\\main\\res\\mipmap-xxhdpi\\sisalfa_icon.png"
-    },
-    {
         "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_com_facebook_tooltip_black_xout.png.flat",
         "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.28.0.aar\\74c5a735860cd1aecfb99604e09b0109\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_xout.png"
+    },
+    {
+        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_sisalfa_icon.png.flat",
+        "source": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\src\\main\\res\\mipmap-xxhdpi\\sisalfa_icon.png"
     },
     {
         "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_switch_track.xml.flat",
         "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\color\\abc_tint_switch_track.xml"
     },
     {
-        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
-        "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
-    },
-    {
         "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20_common_google_signin_btn_text_disabled.xml.flat",
         "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-12.0.1.aar\\a3249566283f31d02a49d3bb956f4865\\res\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
+        "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
@@ -144,12 +144,12 @@
         "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_edittext.xml.flat",
-        "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\color-v23\\abc_tint_edittext.xml"
-    },
-    {
         "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_edittext.xml.flat",
+        "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\color-v23\\abc_tint_edittext.xml"
     },
     {
         "merged": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
