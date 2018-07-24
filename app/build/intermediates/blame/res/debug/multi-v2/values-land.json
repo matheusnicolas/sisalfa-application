@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f4b02d6db41e82065b62d067f9f0c6fb\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\9532cf7acd019adfe21812b662cee271\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\7a2605bb4d287e615679199888b15d08\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

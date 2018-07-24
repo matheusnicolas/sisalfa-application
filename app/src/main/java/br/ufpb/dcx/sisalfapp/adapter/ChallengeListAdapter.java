@@ -48,7 +48,8 @@ public class ChallengeListAdapter extends RecyclerView.Adapter<ChallengeListAdap
 
         final Challenge challenge = dataset.get(position);
         holder.palavraTextView.setText("Palavra: " + challenge.getWord());
-        holder.context.setText("Contexto: " + challenge.getContext().getName());
+
+        //holder.context.setText("Contexto: " + challenge.getContext().getName());
         Picasso.get().load(challenge.getImage()).into(holder.ïmage);
         /*
         Bitmap decoded = edc.getBitmapFromURL("https://app.sisalfa.dcx.ufpb.br/v1/" + challenge.getImage());
@@ -99,7 +100,7 @@ public class ChallengeListAdapter extends RecyclerView.Adapter<ChallengeListAdap
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView ïmage;
-        private TextView palavraTextView, id, context;
+        private TextView palavraTextView;
         private ImageButton audioBtnView;
 
         public ViewHolder(View itemView){
@@ -108,7 +109,6 @@ public class ChallengeListAdapter extends RecyclerView.Adapter<ChallengeListAdap
             ïmage = itemView.findViewById(R.id.imageView);
             palavraTextView =  itemView.findViewById(R.id.text_view_description);
             audioBtnView = itemView.findViewById(R.id.play_button);
-            context = itemView.findViewById(R.id.text_view_context);
         }
 
 

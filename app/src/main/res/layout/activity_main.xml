@@ -22,36 +22,16 @@
         android:id="@+id/button_contexto"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@drawable/ic_contexto"
-        android:layout_marginRight="80dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:onClick="redirectContextoScreen"
-    />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contexto"
-        android:layout_gravity="center"
-        android:layout_marginRight="80dp"/>
-
-    <ImageButton
-        android:id="@+id/button_desafio"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="-69dp"
         android:background="@drawable/ic_desafio"
-        android:onClick="redirectChallengeScreen"/>
+        android:onClick="redirectContextoScreen"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="80dp"
-        android:text="Desafio"/>
+        android:text="Desafios"/>
 
     <ImageButton
         android:id="@+id/button_user"

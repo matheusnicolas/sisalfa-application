@@ -111,7 +111,7 @@ public class ContextListAdapter extends RecyclerView.Adapter<ContextListAdapter.
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView image;
-        private TextView contextoTextView, id_context;
+        private TextView contextoTextView;
         private ImageButton audioBtnView;
 
         public ViewHolder(View itemView){

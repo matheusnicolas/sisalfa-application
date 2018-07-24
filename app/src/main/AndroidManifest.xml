@@ -18,9 +18,11 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name=".MainActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,21 +30,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ContextActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ContextActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".UserActivity" />
-        <activity android:name=".ChallengeActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".AddChallengeActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".AddContextActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".RegisterOptionActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".FacebookRegisterActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ChallengesActivity"
-            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AddChallengeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddContextActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterOptionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FacebookRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".DetailActivity"></activity>
     </application>
 
 </manifest>

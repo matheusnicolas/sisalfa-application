@@ -7,14 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.facebook.login.LoginManager;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
 import br.ufpb.dcx.sisalfapp.model.User;
 import br.ufpb.dcx.sisalfapp.sisalfapi.SisalfaService;
 import retrofit2.Call;
@@ -38,26 +32,11 @@ public class MainActivity extends AppCompatActivity {
         String token = sharedPreferences.getString("token", "");
         tvUsername.setText("Bem vindo, " + username + "!");
         storeUser(token);
-
-        //SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-
-
-
-
-
-
-
-        //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-
-
     }
 
     public void storeUser(final String token){
         SisalfaService service = serviceGenerator.loadApiCt(this);
         Call<User> request = service.getUserInformation(token);
-        //System.out.println("store user token: " + token);
-        //Log.i("USERNAME", "Username: " + username + " Token: " + token);
         final SharedPreferences.Editor s = sharedPreferences.edit();
         request.enqueue(new Callback<User>() {
             @Override
@@ -88,21 +67,9 @@ public class MainActivity extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
-    /*
-    //Dentro da activity_main existe um botão para deslogar, este método é responvável pela ação de deslogar
-    public void logout(View view){
-        FirebaseAuth.getInstance().signOut();
-        LoginManager.getInstance().logOut();
-        goLoginScreen();
-    }*/
 
     public void redirectUserInformation(View view) {
         Intent intent = new Intent(this, UserActivity.class);
-        startActivity(intent);
-    }
-
-    public void redirectChallengeScreen(View view) {
-        Intent intent = new Intent(this, ChallengeActivity.class);
         startActivity(intent);
     }
 

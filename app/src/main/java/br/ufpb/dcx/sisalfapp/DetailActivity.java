@@ -5,7 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.util.List;
@@ -17,36 +20,53 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
-public class ChallengeActivity extends AppCompatActivity {
+public class DetailActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ChallengeListAdapter challengeListAdapter;
+    private ImageButton btnAddChallenge;
     private static final String TAG = "SISALFA_DESAFIO";
     private ServiceGenerator serviceGenerator = new ServiceGenerator();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_desafio);
-        recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
+        setContentView(R.layout.activity_detail);
+        btnAddChallenge = findViewById(R.id.add_challenge_btn);
+        Intent intent = getIntent();
+        final long challengeId = Long.parseLong(intent.getStringExtra("ID"));
+        recyclerView = findViewById(R.id.recyclerview);
         challengeListAdapter = new ChallengeListAdapter(this);
         recyclerView.setAdapter(challengeListAdapter);
         recyclerView.setHasFixedSize(true);
         final GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         recyclerView.setLayoutManager(layoutManager);
-        getChallenges();
+        getChallenges(challengeId);
+        btnAddChallenge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callChallengeActivity(challengeId);
+            }
+        });
     }
 
-    public void getChallenges(){
-        SisalfaService service = serviceGenerator.loadApiCt(this);
-        Call<List<Challenge>> request = service.getAllChallenges();
+    private void callChallengeActivity(long challengeId) {
+        Intent inChallenge = new Intent(this, AddChallengeActivity.class);
+        String id = Long.toString(challengeId);
+        inChallenge.putExtra("ID", id);
+        startActivity(inChallenge);
+    }
+
+    public void getChallenges(long challengeId){
+        SisalfaService sisalfaService = serviceGenerator.loadApiCt(this);
+        Call<List<Challenge>> request = sisalfaService.getChallengeByContext(challengeId);
         request.enqueue(new Callback<List<Challenge>>() {
             @Override
             public void onResponse(Call<List<Challenge>> call, Response<List<Challenge>> response) {
                 if(response.isSuccessful()){
                     List<Challenge> listChallenge = response.body();
                     challengeListAdapter.adicionarListaDesafios(listChallenge);
+
                 }
             }
 
@@ -57,8 +77,5 @@ public class ChallengeActivity extends AppCompatActivity {
         });
     }
 
-    public void redirectAddChallengeScreen(View view) {
-        startActivity(new Intent(this, AddChallengeActivity.class));
 
-    }
 }

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f4b02d6db41e82065b62d067f9f0c6fb\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-26.1.0.aar\\731ad84b660e0dc2849ec5c469093e54\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-27.1.0.aar\\b50003fae8071a0ca5b7d79a80b01960\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -36,6 +36,9 @@ public interface SisalfaService {
     @POST("contexts")
     Call<ContextM> addContext(@Header("x-access-token") String token, @Body ContextM contextM);
 
+    @GET("challenges/{id}/context/")
+    Call<List<Challenge>> getChallengeByContext(@Path("id") long id);
+
     @GET("challenges")
     Call<List<Challenge>> getAllChallenges();
 

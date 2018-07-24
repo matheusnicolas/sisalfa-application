@@ -116,12 +116,6 @@ public class LoginActivity extends AppCompatActivity {
         s.putString("username", username);
         s.putString("password", password);
         s.putString("token", token);
-        /*
-        s.putString("author", author);
-        s.putString("firstName", firstName);
-        s.putString("lastName", lastName);
-        s.putString("email", email);
-        */
         s.commit();
 
 

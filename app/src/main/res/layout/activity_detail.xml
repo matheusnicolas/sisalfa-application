@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/sisalfa_gradient"
-    tools:context=".ChallengeActivity">
+    tools:context=".DetailActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,8 +37,9 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="@drawable/ic_add"
+                android:id="@+id/add_challenge_btn"
                 android:layout_gravity="center"
-                android:onClick="redirectAddChallengeScreen"/>
+                />
         </LinearLayout>
 
 

@@ -42,9 +42,9 @@ import retrofit2.Response;
 public class AddChallengeActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    private EditText eWord, eVideoLink, eContextId;
+    private EditText eWord, eVideoLink;
     private Button mCadastroBtn, mGaleriaBtn, mGravarBtn, mPlayBtn;
-    private TextView textViewGravar, textViewContext;
+    private TextView textViewGravar;
     private ImageView imgGaleria;
     private int SELECT_PICTURE = 1;
     private boolean successRequest;
@@ -55,9 +55,7 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
     private User user;
     private Spinner mSpinner;
     private ServiceGenerator serviceGenerator = new ServiceGenerator();
-    //public List<String> listContext;
     private SharedPreferences sharedPreferences;
-
 
 
     @Override
@@ -66,10 +64,6 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_add_desafio);
         eWord = findViewById(R.id.palavra);
         eVideoLink = findViewById(R.id.video_link);
-        eContextId = findViewById(R.id.context_id);
-        //listContext = new ArrayList<String>();
-        //popSpinner();
-
         mGravarBtn = findViewById(R.id.btn_gravar);
         mCadastroBtn = findViewById(R.id.btn_enviar);
         mGaleriaBtn = findViewById(R.id.btn_galeria);
@@ -79,14 +73,13 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
         mCadastroBtn.setOnClickListener(this);
         mGaleriaBtn.setOnClickListener(this);
         mPlayBtn.setOnClickListener(this);
+        Intent intent = getIntent();
+        String contextId = intent.getStringExtra("ID");
+        sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+        SharedPreferences.Editor s = sharedPreferences.edit();
+        s.putString("contextId", contextId);
 
         successRequest = true;
-
-
-
-        //spinnerAdapter = new SpinnerAdapter(this, R.layout.spinner_layout, listContext);
-
-
 
         mGravarBtn.setOnTouchListener(new View.OnTouchListener() {
 
@@ -167,19 +160,19 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
     }
 
     public void sendChallenge(){
-        sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+
         long author = Long.parseLong(sharedPreferences.getString("author", ""));
         String token = sharedPreferences.getString("token", "");
+        long contextId = Long.parseLong(sharedPreferences.getString("contextId",""));
         String word = eWord.getText().toString();
         String videoLink = eVideoLink.getText().toString();
-        String contextId = eContextId.getText().toString();
         ChallengeToSend d = new ChallengeToSend();
         d.setWord(word);
         d.setVideo(videoLink);
         d.setSound("");//encoderDecoderClass.getEncodedAudio());
         d.setImage(encodeImage);
         d.setAuthor(author);
-        d.setContext(Long.parseLong(contextId));
+        d.setContext(contextId);
         SisalfaService service = serviceGenerator.loadApiCt(this);
         Call<ChallengeToSend> request = service.addChallenge(token, d);
         request.enqueue(new Callback<ChallengeToSend>() {
@@ -189,7 +182,6 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
                     if (response.body() != null) {
                         eWord.setText("");
                         eVideoLink.setText("");
-                        eContextId.setText("");
                         imgGaleria.setImageBitmap(null);
                         Toast.makeText(getApplicationContext(), "Cadastrado com Sucesso!",  Toast.LENGTH_LONG).show();
                     }
@@ -204,36 +196,7 @@ public class AddChallengeActivity extends AppCompatActivity implements View.OnCl
             }
         });
     }
-    /*
-    public void popSpinner(){
-        final ContextM contextM = new ContextM();
-        SisalfaService sisalfaService = serviceGenerator.loadApiCt(this);
-        Call<List<ContextM>> request = sisalfaService.getAllContexts();
-        request.enqueue(new Callback<List<ContextM>>() {
-            @Override
-            public void onResponse(Call<List<ContextM>> call, Response<List<ContextM>> response) {
-                Log.i("LIST", "ENTROU ON RESPONSE");
-                if(response.isSuccessful()){
-                    List<ContextM> lista = response.body();
-                    for(ContextM c: lista){
-                        String conc = "";
-                        Log.i("CNAME", c.getName());
-                        conc += c.getName() + " " + c.getId();
-                        listContext.add(conc);
-                    }
-                }
-            }
 
-            @Override
-            public void onFailure(Call<List<ContextM>> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "Erro: " + t.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        });
-
-
-
-        //return spinnerAdapter;
-    }*/
 
 
 }

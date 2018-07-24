@@ -1,20 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Breba\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\mathe\\StudioProjects\\sisalfa-application\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f4b02d6db41e82065b62d067f9f0c6fb\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\bdf58c24166d7f97d975a95b6d22a513\\res\\values-v24\\values-v24.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,212,347,416,480,549",
-                        "endColumns": "156,134,68,63,68,69",
-                        "endOffsets": "207,342,411,475,544,614"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
                     }
                 },
                 {
-                    "source": "C:\\Users\\Breba\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\0dd8e0b8a34da2cf0957b39e71d1f868\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\mathe\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.0.aar\\81f2ac313b76dfc3b682a76b214c9d5c\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -23,11 +23,11 @@
                         "endOffsets": "116,177,243,310"
                     },
                     "to": {
-                        "startLines": "8,9,10,11",
+                        "startLines": "4,5,6,7",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "619,685,746,812",
+                        "startOffsets": "347,413,474,540",
                         "endColumns": "65,60,65,66",
-                        "endOffsets": "680,741,807,874"
+                        "endOffsets": "408,469,535,602"
                     }
                 }
             ]

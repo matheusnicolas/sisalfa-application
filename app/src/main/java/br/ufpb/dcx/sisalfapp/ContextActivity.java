@@ -25,8 +25,6 @@ public class ContextActivity extends AppCompatActivity implements ContextListAda
     private ContextListAdapter contextListAdapter;
     private static final String TAG = "SISALFA_CONTEXTO";
 
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contexto);
@@ -34,7 +32,7 @@ public class ContextActivity extends AppCompatActivity implements ContextListAda
         contextListAdapter = new ContextListAdapter(this);
         recyclerView.setAdapter(contextListAdapter);
         recyclerView.setHasFixedSize(true);
-
+        contextListAdapter.setOnItemClickListener(ContextActivity.this);
         final GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         recyclerView.setLayoutManager(layoutManager);
         getContext();
@@ -65,10 +63,11 @@ public class ContextActivity extends AppCompatActivity implements ContextListAda
 
     @Override
     public void onItemClickListener(int position) {
-        Intent detailIntent = new Intent(this, ChallengesActivity.class);
+        Intent detailIntent = new Intent(this, DetailActivity.class);
         List<ContextM> contextList = contextListAdapter.getAllContexts();
         ContextM clickedItem = contextList.get(position);
-        detailIntent.putExtra("ID", clickedItem.getId());
+        String id = Long.toString(clickedItem.getId());
+        detailIntent.putExtra("ID", id);
         startActivity(detailIntent);
     }
 }
